@@ -19,21 +19,22 @@ This is the example project used for the [Mike.Works](https://mike.works) [TypeS
 * [sass-loader](https://github.com/webpack-contrib/sass-loader) for traditional management of styles
 * [Preact](https://github.com/developit/preact) v8 for building components (and [preact-compat](https://github.com/developit/preact-compat) so you can use it as you would use React)
 * [Hot Loader v3](https://github.com/gaearon/react-hot-loader) so styles and JS are updated in place as you save source code
+* [extract-text-webpack-plugin](https://github.com/webpack-contrib/extract-text-webpack-plugin) so compiled styles are external stylesheets instead of inline style blocks
 
 ## How to use it
 
 ##### Start the Development Server
-
-`npm start`
+`npm start <exercise-name>`
 
 ##### Build Development Assets in the `/dist` folder
+This will be an un-minified version of an exercise, and will include some webpack-specific tooling, intended only for development use
 
-`npm run build:dev`
+`npm run build:dev <exercise-name>`
 
 ##### Build Production Assets in the `/dist` folder
+This will be an an optimized version of the exercise
 
-`npm run build:dist`
-
+`npm run build:dist <exercise-name>`
 
 # Copyright
 

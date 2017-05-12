@@ -1,27 +1,31 @@
-var path = require('path');
-var express = require('express');
-var webpack = require('webpack');
-var config = require('./webpack.dev');
+var path = require("path");
+var express = require("express");
+var webpack = require("webpack");
+var exercise = process.argv[2] || process.env.WEBPACK_ENV || "dev";
+var config = require("./webpack.config")(exercise);
 
 var app = express();
 var compiler = webpack(config);
 
-app.use(require('webpack-dev-middleware')(compiler, {
-	noInfo: true,
-	publicPath: config.output.publicPath
-}));
+app.use(
+  require("webpack-dev-middleware")(compiler, {
+    quiet: true,
+    noInfo: true,
+    publicPath: config.output.publicPath
+  })
+);
 
-app.use(require('webpack-hot-middleware')(compiler));
+app.use(require("webpack-hot-middleware")(compiler));
 
-app.get('*', function (req, res) {
-	res.sendFile(path.join(__dirname, 'index.html'));
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "exercises", exercise, "index.html"));
 });
 
-app.listen(3000, 'localhost', function (err) {
-	if (err) {
-		console.log(err);
-		return;
-	}
+app.listen(3000, "localhost", function(err) {
+  if (err) {
+    console.log(err);
+    return;
+  }
 
-	console.log('Listening at http://localhost:3000');
+  console.log("Listening at http://localhost:3000");
 });
