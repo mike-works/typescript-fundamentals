@@ -37,6 +37,17 @@ This will be an an optimized version of the exercise
 
 `npm run build:dist <exercise-name>`
 
+# The Exercise Folder
+Exercises are standalone mini-projects with the following folder structure.
+```sh
+index.html   # HTML served for exercise
+./src        # Scripts (ts, js, tsx and jsx)
+./styles     # Styles
+   ⌙ app.scss       #  (optional) Entry point for styles
+./tests      # Tests
+   ⌙ myfile.test.ts # Tests must have *.test.js or *.test.ts
+```
+
 # License
 While the general license for this project is the BSD 3-clause, the exercises
 themselves are proprietary and are licensed on a per-individual basis, usually
