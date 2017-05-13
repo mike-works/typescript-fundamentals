@@ -20,6 +20,7 @@ This is the example project used for the [Mike.Works](https://mike.works) [TypeS
 * [Preact](https://github.com/developit/preact) v8 for building components (and [preact-compat](https://github.com/developit/preact-compat) so you can use it as you would use React)
 * [Hot Loader v3](https://github.com/gaearon/react-hot-loader) so styles and JS are updated in place as you save source code
 * [extract-text-webpack-plugin](https://github.com/webpack-contrib/extract-text-webpack-plugin) so compiled styles are external stylesheets instead of inline style blocks
+* [Jest](http://facebook.github.io/jest/) as a testing platform
 
 ## How to use it
 
