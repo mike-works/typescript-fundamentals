@@ -1,19 +1,23 @@
 const path = require('path');
 const fs = require('fs');
-const exercises = require('./exercises');
 
-module.exports = function generateWebpackEntries(env) {
-  let exercisePath = exercises.exercisePath(env);
+function getDirectories(srcpath) {
+  return fs
+    .readdirSync(srcpath)
+    .filter(file => fs.lstatSync(path.join(srcpath, file)).isDirectory())
+    .map(s => s.toLowerCase().trim());
+}
+const EXERCISES = Object.freeze(
+  getDirectories(path.join(__dirname, '../exercises'))
+);
 
-  let baseEntries = ['./src/index.tsx'];
-  if (fs.existsSync(path.join(exercisePath, 'styles', 'app.scss'))) {
-    baseEntries.push('./styles/app.scss');
+module.exports = {
+  exercisePath(env) {
+    let exercise = env.toLowerCase();
+    if (EXERCISES.indexOf(exercise) < 0) {
+      throw `Unknown exercise: ${env}! Valid exercises are:\n\t${EXERCISES.join('\n\t')}`;
+    } else {
+      return path.resolve(__dirname, '../exercises', exercise);
+    }
   }
-  if (fs.existsSync(path.join(exercisePath, 'styles', 'app.css'))) {
-    baseEntries.push('./styles/app.css');
-  }
-  if (env === 'dev') {
-    baseEntries.push('webpack-hot-middleware/client');
-  }
-  return baseEntries;
 };

@@ -1,100 +1,25 @@
 {
-    "lintOptions": {
-        "typeCheck": true
-    },
-    "extends": "tslint:all",
-    "rules": {
-        "quotemark": [
-            "single"
-        ],
-        "no-parameter-properties": false,
-        "no-unused-variable": false,
-        "align": [
-            true,
-            "parameters"
-        ],
-        "arrow-return-shorthand": true,
-        "comment-format": [
-            true,
-            "check-space"
-        ],
-        "only-arrow-functions": [
-            true,
-            "allow-declarations",
-            "allow-named-functions"
-        ],
-        "whitespace": {
-            "options": [
-                "check-branch",
-                "check-decl",
-                "check-operator",
-                "check-separator",
-                "check-type",
-                "check-typecast"
-            ]
-        },
-        "completed-docs": false,
-        "cyclomatic-complexity": false,
-        "no-any": false,
-        "no-boolean-literal-compare": false,
-        "no-inferrable-types": false,
-        "no-inferred-empty-object-type": false,
-        "no-magic-numbers": false,
-        "no-non-null-assertion": false,
-        "no-null-keyword": false,
-        "no-require-imports": false,
-        "no-unbound-method": false,
-        "no-unnecessary-callback-wrapper": false,
-        "no-unnecessary-qualifier": false,
-        "no-use-before-declare": false,
-        "no-void-expression": false,
-        "prefer-function-over-method": false,
-        "prefer-template": false,
-        "restrict-plus-operands": false,
-        "return-undefined": false,
-        "strict-boolean-expressions": false,
-        "strict-type-predicates": false,
-        "triple-equals": false,
-        "typedef": false,
-        "ban": [
-            true, [
-                "describe",
-                "only"
-            ],
-            [
-                "it",
-                "only"
-            ],
-            [
-                "Object",
-                "assign"
-            ]
-        ],
-        "interface-name": false,
-        "max-classes-per-file": false,
-        "max-line-length": [
-            true,
-            140
-        ],
-        "member-ordering": [
-            true,
-            "public-before-private",
-            "static-before-instance",
-            "variables-before-functions"
-        ],
-        "no-console": {
-            "options": [
-                "log"
-            ]
-        },
-        "no-switch-case-fall-through": true,
-        "switch-default": false,
-        "variable-name": [
-            true,
-            "ban-keywords",
-            "check-format",
-            "allow-leading-underscore",
-            "allow-pascal-case"
-        ]
-    }
+  "lintOptions": {
+    "typeCheck": true,
+    "project": true
+  },
+  "extends": ["tslint-microsoft-contrib"],
+  "rulesDirectory": ["node_modules/tslint-microsoft-contrib"],
+  "rules": {
+    "no-var-keyword": true,
+    "missing-jsdoc": false,
+    "typedef": [
+      true,
+      "arrow-parameter",
+      "call-signature",
+      "property-declaration",
+      "member-variable-declaration",
+      "parameter"
+    ],
+    "newline-before-return": false,
+    "no-relative-imports": false,
+    "prefer-const": false,
+    "no-default-export": false,
+    "export-name": false
+  }
 }

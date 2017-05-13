@@ -1,13 +1,14 @@
 import * as React from 'react';
-import Clock from './Clock';
+import { Clock } from './Clock';
 
-export default class App extends React.Component<{}, {}> {
-	render() {
-		let x = 4; return (
-			<div>
+export class App extends React.Component<{}, {}> {
+  public render(): JSX.Element {
+    let x = 4;
+    return (
+      <div>
         <h2>What time is it?</h2>
-				<Clock color={'#c00'} />
-			</div>
-		);
-	}
+        <Clock color={ '#c00' } />
+      </div>
+    );
+  }
 }

@@ -1,13 +1,13 @@
 {
-    "compilerOptions": {
-        "target": "ES5",
-        "jsx": "react",
-        "sourceMap": true,
-        "noImplicitAny": false,
-        "experimentalDecorators": true
-    },
-    "exclude": [
-        "node_modules",
-        "devServer.js"
-    ]
+  "compilerOptions": {
+    "target": "ES5",
+    "jsx": "react",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "node_modules",
+    "server.js"
+  ]
 }
