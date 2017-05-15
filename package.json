@@ -7,7 +7,8 @@
   "author": "Mike North <michael.l.north@gmail.com> (https://mike.works)",
   "scripts": {
     "clean": "rimraf dist",
-    "test": "jest",
+    "test": "jest --watch",
+    "test:ci": "jest",
     "start": "node server.js",
     "build:dev": "webpack --progress --profile --colors --env",
     "build:dist": "webpack --optimize-minimize --define process.env.NODE_ENV='production' --progress --profile --colors --env "
