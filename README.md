@@ -5,11 +5,23 @@
 </p>
 <p align='center'>
   <a href="https://mike.works/course/typescript-fundamentals-7832c19" target='_blank'>
-    <img src='https://cloud.githubusercontent.com/assets/558005/25579415/1afbffaa-2e78-11e7-9b4a-ea44ead26bfb.png' />
+    <img height=150 src='https://cloud.githubusercontent.com/assets/558005/25579415/1afbffaa-2e78-11e7-9b4a-ea44ead26bfb.png' />
   </a>
-</p> 
-
-This is the example project used for the [Mike.Works](https://mike.works) [TypeScript Fundamentals](https://mike.works/course/typescript-fundamentals-7832c19) course.
+</p>
+<p align='center'>
+  <a href="https://travis-ci.org/mike-north/typescript-fundamentals" title="Build Status">
+    <img title="Build Status" src="https://travis-ci.org/mike-north/typescript-fundamentals.svg?branch=solutions"/>
+  </a>
+  <a href="https://mike.works/course/typescript-fundamentals-7832c19" title="TypeScript Fundamentals">
+    <img title="Course Outline" src="https://img.shields.io/badge/mike.works-course%20outline-blue.svg"/>
+  </a>
+  <a href="https://bit.ly/typescript-fundamentals" title="Slides">
+    <img title="Slides" src="https://img.shields.io/badge/mike.works-slides-blue.svg"/>
+  </a>
+</p>
+<p align='center'>
+This is the example project used for the <a title="Mike.Works" href="https://mike.works">Mike.Works</a> <a title="TypeScript Fundamentals" href="https://mike.works/course/typescript-fundamentals-7832c19">TypeScript Fundamentals</a> course.
+</p>
 
 # What are the pieces?
 
