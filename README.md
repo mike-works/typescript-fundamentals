@@ -25,6 +25,8 @@ This is the example project used for the <a title="Mike.Works" href="https://mik
 
 # What are the pieces?
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mike-north/typescript-fundamentals.svg)](https://greenkeeper.io/)
+
 * [Webpack 2](https://webpack.js.org)
 * [TypeScript](https://www.typescriptlang.org) 2.3, setup for experimental decorator support
 * [TSLint](https://github.com/palantir/tslint) for linting, setup with a strict JSX-friendly set of rules
