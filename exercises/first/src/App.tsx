@@ -7,7 +7,7 @@ export class App extends React.Component<{}, {}> {
     return (
       <div>
         <h2>What time is it?</h2>
-        <Clock color={ '#c00' } />
+        <Clock color={ '#000' } />
       </div>
     );
   }

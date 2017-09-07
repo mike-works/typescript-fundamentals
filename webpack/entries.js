@@ -12,8 +12,6 @@ module.exports = function(env) {
   if (fs.existsSync(path.join(exercisePath, "styles", "app.css"))) {
     baseEntries.push("./styles/app.css");
   }
-  if (env === "dev") {
-    baseEntries.push("webpack-hot-middleware/client");
-  }
+  baseEntries.push("webpack-hot-middleware/client");
   return baseEntries;
 };
