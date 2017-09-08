@@ -29,7 +29,7 @@ export class Clock extends React.Component<IClockProps, IClockState> {
     window.clearInterval(this.task);
   }
 
-  public render(): JSX.Element {
+  public render() {
     const d = this.state.time;
     let time = [
       d.getHours(),

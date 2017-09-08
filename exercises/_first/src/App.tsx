@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Clock } from './Clock';
 
 export class App extends React.Component<{}, {}> {
-  public render(): JSX.Element {
+  public render() {
     let x = 4;
     return (
       <div>

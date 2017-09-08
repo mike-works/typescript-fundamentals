@@ -7,15 +7,15 @@
   "author": "Mike North <michael.l.north@gmail.com> (https://mike.works)",
   "scripts": {
     "clean": "rimraf dist",
-    "test": "jest --watch",
-    "test:ci": "jest",
+    "test": "jest --watch --no-cache",
+    "test:ci": "bash -c 'npm run build:dev $EXERCISE && jest --no-cache $EXERCISE'",
     "start": "node server.js",
     "build:dev": "webpack --progress --profile --colors --env",
     "build:dist": "webpack --optimize-minimize --define process.env.NODE_ENV='production' --progress --profile --colors --env "
   },
   "devDependencies": {
     "@types/react": "^16.0.5",
-    "@types/react-dom": "^15.5.0",
+    "@types/react-dom": "^15.5.4",
     "awesome-typescript-loader": "^3.1.3",
     "babel-core": "^6.24.1",
     "babel-jest": "^21.0.0",

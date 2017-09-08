@@ -3,23 +3,8 @@
     "typeCheck": true,
     "project": true
   },
-  "extends": ["tslint-microsoft-contrib"],
   "rulesDirectory": ["node_modules/tslint-microsoft-contrib"],
   "rules": {
-    "no-var-keyword": true,
-    "missing-jsdoc": false,
-    "typedef": [
-      true,
-      "arrow-parameter",
-      "call-signature",
-      "property-declaration",
-      "member-variable-declaration",
-      "parameter"
-    ],
-    "newline-before-return": false,
-    "no-relative-imports": false,
-    "prefer-const": false,
-    "no-default-export": false,
-    "export-name": false
+    
   }
 }

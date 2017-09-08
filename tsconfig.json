@@ -2,8 +2,11 @@
   "compilerOptions": {
     "target": "ES5",
     "jsx": "react",
-    "sourceMap": true,
+    "noEmitOnError": true,
+    "strict": true,
     "noImplicitAny": false,
+    "sourceMap": true,
+    "noImplicitReturns": true,
     "experimentalDecorators": true
   },
   "exclude": [
