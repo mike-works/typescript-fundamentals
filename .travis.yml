@@ -2,7 +2,12 @@ language: node_js
 node_js:
 - 'stable'
 
-script: EXERCISE=cashier npm run test:ci
+script: npm run test:ci
+
+env:
+  - EXERCISE=cashier
+  - EXERCISE=accounts
+  - EXERCISE=dealer
 
 branches:
   except:
