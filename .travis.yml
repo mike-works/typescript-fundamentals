@@ -8,6 +8,7 @@ env:
   - EXERCISE=cashier
   - EXERCISE=accounts
   - EXERCISE=dealer
+  - EXERCISE=color-functions
 
 branches:
   except:
