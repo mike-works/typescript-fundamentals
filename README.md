@@ -15,7 +15,7 @@
   <a href="https://mike.works/course/typescript-fundamentals-7832c19" title="TypeScript Fundamentals">
     <img title="Course Outline" src="https://img.shields.io/badge/mike.works-course%20outline-blue.svg"/>
   </a>
-  <a href="https://bit.ly/typescript-fundamentals" title="Slides">
+  <a href="https://docs.mike.works/typescript-slides" title="Slides">
     <img title="Slides" src="https://img.shields.io/badge/mike.works-slides-blue.svg"/>
   </a>
 </p>
