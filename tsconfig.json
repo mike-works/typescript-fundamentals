@@ -4,9 +4,9 @@
     "jsx": "react",
     "noEmitOnError": true,
     "strict": true,
+    "strictNullChecks": true,
     "noImplicitAny": true,
     "sourceMap": true,
-    "noImplicitReturns": true,
     "experimentalDecorators": true,
     "lib": [
       "dom",
@@ -16,7 +16,6 @@
     ]
   },
   "exclude": [
-    "node_modules",
-    "server.js"
+    "node_modules"
   ]
 }
