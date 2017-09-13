@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "ES5",
     "jsx": "react",
+    "module": "commonjs",
     "noEmitOnError": true,
     "strict": true,
     "strictNullChecks": true,
