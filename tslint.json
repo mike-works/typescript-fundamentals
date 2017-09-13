@@ -5,6 +5,11 @@
   },
   "rulesDirectory": ["node_modules/tslint-microsoft-contrib"],
   "rules": {
-    
+    "no-empty-interface": true,
+    "no-unnecessary-type-assertion": true,
+    "adjacent-overload-signatures": true,
+    "no-duplicate-variable": true,
+    "triple-equals": true,
+    "prefer-template": true
   }
 }
