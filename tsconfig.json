@@ -10,10 +10,6 @@
     "noImplicitThis": true,
     "sourceMap": true,
     "experimentalDecorators": true,
-    "types": [
-      "webpack-env",
-      "node"
-    ],
     "lib": [
       "dom",
       "es2017",
