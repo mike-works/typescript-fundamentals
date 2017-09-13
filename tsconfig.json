@@ -4,10 +4,16 @@
     "jsx": "react",
     "noEmitOnError": true,
     "strict": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "sourceMap": true,
     "noImplicitReturns": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "es2017",
+      "dom.iterable",
+      "scripthost"
+    ]
   },
   "exclude": [
     "node_modules",

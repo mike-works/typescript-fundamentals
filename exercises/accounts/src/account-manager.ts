@@ -1,5 +1,5 @@
 export class AccountManager {
-  users: any[] = [];
+  users = new Array();
 
   /**
    * Create a new user account
@@ -41,6 +41,3 @@ export class AccountManager {
     return user;
   }
 }
-
-let am = new AccountManager();
-export let x = am.register(1,3);
