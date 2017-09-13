@@ -12,7 +12,7 @@ const EXERCISES = Object.freeze(
 );
 
 module.exports = {
-  exercisePath(env) {
+  exercisePath(env = '') {
     let exercise = env.toLowerCase();
     if (EXERCISES.indexOf(exercise) < 0) {
       throw `Unknown exercise: ${env}! Valid exercises are:\n\t${EXERCISES.join('\n\t')}`;
