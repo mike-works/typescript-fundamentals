@@ -1,1 +1,1 @@
-import './account-manager';
+import './cashier';
