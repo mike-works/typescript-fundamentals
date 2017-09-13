@@ -6,6 +6,7 @@
     "strict": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
+    "noImplicitThis": true,
     "sourceMap": true,
     "experimentalDecorators": true,
     "lib": [
