@@ -1,6 +1,6 @@
-interface ILinkedList<T> {
-  push(item: T): ILinkedList<T>;
-  push(items: T[]): ILinkedList<T>;
+interface IStack<T> {
+  push(item: T): IStack<T>;
+  push(items: T[]): IStack<T>;
   pop(): T | undefined;
   length(): number;
   print(): void;
