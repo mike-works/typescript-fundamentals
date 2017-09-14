@@ -18,6 +18,9 @@
   <a href="https://docs.mike.works/typescript-slides" title="Slides">
     <img title="Slides" src="https://img.shields.io/badge/mike.works-slides-blue.svg"/>
   </a>
+  <a title='GreenKeeper'>
+    <img title='GreenKeeper' src='https://badges.greenkeeper.io/mike-north/typescript-fundamentals.svg'>
+  </a>
 </p>
 <p align='center'>
 This is the example project used for the <a title="Mike.Works" href="https://mike.works">Mike.Works</a> <a title="TypeScript Fundamentals" href="https://mike.works/course/typescript-fundamentals-7832c19">TypeScript Fundamentals</a> course.
@@ -25,13 +28,13 @@ This is the example project used for the <a title="Mike.Works" href="https://mik
 
 # What are the pieces?
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/mike-north/typescript-fundamentals.svg)](https://greenkeeper.io/)
 
-* [Webpack 2](https://webpack.js.org)
-* [TypeScript](https://www.typescriptlang.org) 2.3, setup for experimental decorator support
+
+* [Webpack 3](https://webpack.js.org)
+* [TypeScript](https://www.typescriptlang.org) 2.5, setup for experimental decorator support
 * [TSLint](https://github.com/palantir/tslint) for linting, setup with a strict JSX-friendly set of rules
 * [sass-loader](https://github.com/webpack-contrib/sass-loader) for traditional management of styles
-* [Preact](https://github.com/developit/preact) v8 for building components (and [preact-compat](https://github.com/developit/preact-compat) so you can use it as you would use React)
+* [React](https://facebook.github.io/react/) v16 for building components
 * [Hot Loader v3](https://github.com/gaearon/react-hot-loader) so styles and JS are updated in place as you save source code
 * [extract-text-webpack-plugin](https://github.com/webpack-contrib/extract-text-webpack-plugin) so compiled styles are external stylesheets instead of inline style blocks
 * [Jest](http://facebook.github.io/jest/) as a testing platform
