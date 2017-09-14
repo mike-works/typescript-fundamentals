@@ -24,7 +24,7 @@
     "babel-core": "^6.24.1",
     "babel-jest": "^21.0.0",
     "babel-loader": "^7.0.0",
-    "babel-plugin-react-transform": "^2.0.2",
+    "babel-plugin-react-transform": "^3.0.0",
     "babel-preset-env": "^1.4.0",
     "css-loader": "^0.28.0",
     "express": "^4.13.3",
