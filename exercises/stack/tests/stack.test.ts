@@ -32,12 +32,6 @@ test('pushing a few items to the stack (at once) increases its size appropriatel
   exp(l.length()).toBe(4);
 });
 
-test('pushing a few items to the stack (at once) increases its size appropriately', () => {
-  let l = new Stack<string>();
-  l.push(['abc', 'def', 'ghi', 'jkl']);
-  exp(l.length()).toBe(4);
-});
-
 test('last items pushed on are the first to pop off', () => {
   let l = new Stack<string>();
   l.push(['abc', 'def', 'ghi', 'jkl']);
