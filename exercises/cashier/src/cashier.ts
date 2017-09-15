@@ -8,7 +8,7 @@ interface CartAPI {
   length: number;
   total: number;
   addItem(item: CartItem): CartAPI;
-  add(name: string, price: number, qty: number): CartAPI;
+  add(name: string, price: number, qty?: number): CartAPI;
 }
 
 export function cashier(): CartAPI {
