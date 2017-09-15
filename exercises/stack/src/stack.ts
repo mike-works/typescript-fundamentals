@@ -6,6 +6,6 @@ interface IStack<T> {
   print(): void;
 }
 
-export class Stack {
+export class Stack<T> {
 
 }
