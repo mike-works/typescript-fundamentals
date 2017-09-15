@@ -4,7 +4,7 @@ interface User {
 }
 
 interface ConfirmedUser extends User {
-  isActive: true;
+  isActive: boolean;
 }
 
 interface Admin extends ConfirmedUser {
