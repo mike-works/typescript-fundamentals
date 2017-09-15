@@ -1,0 +1,3 @@
+export default {
+  google: `${'<PASTE YOUR API KEY HERE>' || process.env.GOOGLE_API_KEY}`
+};
