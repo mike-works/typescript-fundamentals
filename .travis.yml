@@ -9,6 +9,12 @@ env:
   - EXERCISE=accounts
   - EXERCISE=dealer
   - EXERCISE=color-functions
+  - EXERCISE=stack
+  - EXERCISE=fib
+  - EXERCISE=autocomplete-sfc
+  - EXERCISE=autocomplete-2
+  - EXERCISE=autocomplete-3
+  - EXERCISE=autocomplete-4
 
 branches:
   except:
