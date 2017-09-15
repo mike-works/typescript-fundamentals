@@ -1,0 +1,44 @@
+* {
+  font-family: sans-serif;
+}
+
+#root {
+  width: 75%;
+  margin: auto;
+}
+.results {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 5px;
+    border: 1px solid #ddd;
+    background: #eee;
+    margin-bottom: 5px;
+    h3 {
+      margin: 5px 0;
+    }
+    p {
+      margin: 5px 0;
+    }
+    .icon {
+      float: right;
+      max-height: 34px;
+      margin: 10px;
+    }
+  }
+  .tag {
+    background: purple;
+    color: white;
+    padding: 2px 4px;
+    margin-right: 4px;
+    border-radius: 2px;
+  }
+}
+
+.red {
+  color: red;
+}
+.blue {
+  color: steelblue;
+}
+
