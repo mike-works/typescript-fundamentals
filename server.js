@@ -1,11 +1,24 @@
 var path = require("path");
 var express = require("express");
+var proxy = require('http-proxy-middleware');
 var webpack = require("webpack");
 var exercise = process.argv[2] || process.env.WEBPACK_ENV || "dev";
 var config = require("./webpack.config")(exercise);
+const { google } = require('./apikeys.js');
+
+if (!google || typeof google !== 'string' || google.length === 0) {
+  throw 'Google API key not found. Please set it as an environment variable GOOGLE_API_KEY';
+}
 
 var app = express();
 var compiler = webpack(config);
+
+app.use('/maps/api/place', proxy({
+  target: 'https://maps.googleapis.com',
+  changeOrigin: true,
+  log: true,
+  pathRewrite: path => `${path}&key=${google}`
+}));
 
 app.use(
   require("webpack-dev-middleware")(compiler, {
@@ -15,6 +28,7 @@ app.use(
 );
 
 app.use(require("webpack-hot-middleware")(compiler));
+
 
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "exercises", exercise, "index.html"));

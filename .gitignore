@@ -5,4 +5,4 @@ typings
 npm-debug*
 yarn-error*
 tocopy*
-apikeys.ts
+apikeys.js
