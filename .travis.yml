@@ -17,5 +17,5 @@ env:
   - EXERCISE=autocomplete-4
 
 branches:
-  except:
-  - master
+  only:
+  - solutions
