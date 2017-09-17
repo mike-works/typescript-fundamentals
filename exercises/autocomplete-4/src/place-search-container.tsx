@@ -4,11 +4,12 @@ import { shortUrl } from './utils/string';
 import { PlaceDetails } from './utils/places';
 import { PlaceSearchResult } from './place-search-result';
 import { PlaceSearchResultList } from './place-search-result-list';
+import { CancellablePromise } from './task';
 
 interface IPlaceSearchContainerState {
   results: PlaceDetails[];
   term: string,
-  existingSearch?: Promise<PlaceDetails[]>;
+  existingSearch?: CancellablePromise<PlaceDetails[]>;
 }
 
 export class PlaceSearchContainer extends React.Component<{}, IPlaceSearchContainerState> {
@@ -31,7 +32,9 @@ export class PlaceSearchContainer extends React.Component<{}, IPlaceSearchContai
    * @return {undefined}
    */
   beginSearch(term: string) {
-    
+    if (this.state.existingSearch) {
+      this.state.existingSearch.cancelled = true;
+    }
     // Kick off the new search, with the new search term
     let p = autocomplete(term);
     // Update the existingSearch state, so our component re-renders
