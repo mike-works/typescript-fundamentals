@@ -33,7 +33,7 @@
     "http-proxy-middleware": "^0.17.4",
     "jest": "^21.0.1",
     "node-sass": "^4.5.2",
-    "react": "^15.6.1",
+    "react": "^16.0.0",
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
     "react-transform-catch-errors": "^1.0.0",
