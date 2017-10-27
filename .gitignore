@@ -6,3 +6,4 @@ npm-debug*
 yarn-error*
 tocopy*
 apikeys.js
+package-lock.json
