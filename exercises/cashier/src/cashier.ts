@@ -7,9 +7,9 @@ obj.foo = 'foo';
 obj.bar = '5';
 obj.baz = 'baz';
 
-interface ReceivesThreeNums {
-  (foo: number, bar: number, baz: number): C
-}
+// interface ReceivesThreeNums {
+//   (foo: number, bar: number, baz: number): C
+// }
 
 interface CartItem {
   name: string
