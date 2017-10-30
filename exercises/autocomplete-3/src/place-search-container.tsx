@@ -5,11 +5,20 @@ import { PlaceDetails } from './utils/places';
 import { PlaceSearchResult } from './place-search-result';
 import { PlaceSearchResultList } from './place-search-result-list';
 
+interface ContainerState {
+  results: PlaceDetails[]
+  term: string
+  inProgress: boolean
+}
 
-export class PlaceSearchContainer extends React.Component<{}, {}> {
+export class PlaceSearchContainer extends React.Component<{}, ContainerState> {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      term: '',
+      inProgress: false,
+      results: [] as PlaceDetails[]
+    };
     // Event handler for changes to search term
     this.beginSearch = this.beginSearch.bind(this);
   }
@@ -21,7 +30,15 @@ export class PlaceSearchContainer extends React.Component<{}, {}> {
    * @memberof PlaceSearch
    * @return {undefined}
    */
-  beginSearch(term: string) {
+  async beginSearch(term: string) {
+    this.setState({term, inProgress: true})
+    
+    let placeDetails: PlaceDetails[] = await autocomplete(term);
+    
+    this.setState({
+      results: placeDetails,
+      inProgress: false
+    });
     // Initiate a search using the ./autocomplete.ts module
     // When the promise it returns resolves, update your state accordingly
   }
@@ -37,8 +54,9 @@ export class PlaceSearchContainer extends React.Component<{}, {}> {
    */
   render() {
     return (
-      <p>Replace this with a PlaceSearchResultList</p>
-      // <PlaceSearchResultList />
+      <PlaceSearchResultList
+        {...this.state}
+        onSearchTermChanged={this.beginSearch} />
     );
   }
 }

@@ -46,7 +46,10 @@ export const PlaceSearchResultList: React.SFC<IPlaceSearchResultListProps> =
     return (
       <div>
         <h2>Search for a place</h2>
-        <input type="search" placeholder="Search" onChange={e => onSearchTermChanged ? onSearchTermChanged(e.target.value) : () => {}} />
+        <input
+          type="search"
+          placeholder="Search"
+          onChange={e => onSearchTermChanged ? onSearchTermChanged(e.target.value) : undefined} />
         <ul className="results">
           {searchResults}
         </ul>
