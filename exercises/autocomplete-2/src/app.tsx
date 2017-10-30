@@ -21,6 +21,12 @@ export class App extends React.Component<{}, IAppState> {
   }
   async trySearch(search: string) {
     this.setState({ inProgress: true, term: search });
+    // fetchPlaceSummaries(search).then(placeSummaries => {
+    //   return fetchPlaceDetails(placeSummaries.map(p => p.place_id));
+    // })
+    // .then(results => {
+    //   this.setState({ results, inProgress: false });
+    // })
     let placeSummaries: PlaceSummary[] = await fetchPlaceSummaries(search);
     let results: PlaceDetails[] = await fetchPlaceDetails(placeSummaries.map(p => p.place_id));
     this.setState({ results, inProgress: false });
