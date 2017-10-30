@@ -23,8 +23,8 @@ export class App extends React.Component<{}, IAppState> {
     let placeResults = this.state.results.map(pr => {
       /////////////////////////////////////////////
       // 👇 Replace this with your new <PlaceSearchResult /> component //
-      return <p key={pr.id}>{pr.name}</p>;
-      // return <PlaceSearchResult {...pr}/>;
+      // return <p key={pr.id}>{pr.name}</p>;
+      return <PlaceSearchResult {...pr}/>;
     });
     return (
       <ul className='results'>
