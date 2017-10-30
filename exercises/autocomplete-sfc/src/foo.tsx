@@ -3,7 +3,8 @@ import * as React from 'react';
 interface FooProps {
   what: string
 }
-
+// const Foo: React.SFC<FooProps> = (props) => (
+//   OR
 const Foo = ({ what }: FooProps) => (
   <div>
       <h1>Hello</h1>
