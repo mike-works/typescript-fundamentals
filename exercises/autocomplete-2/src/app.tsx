@@ -19,7 +19,8 @@ export class App extends React.Component<{}, IAppState> {
     };
     this.trySearch = this.trySearch.bind(this);
   }
-  async trySearch(search: string) {
+  async trySearch(evt: React.ChangeEvent<HTMLInputElement>) {
+    let search = evt.target.value;
     this.setState({ inProgress: true, term: search });
     // fetchPlaceSummaries(search).then(placeSummaries => {
     //   return fetchPlaceDetails(placeSummaries.map(p => p.place_id));
@@ -28,18 +29,18 @@ export class App extends React.Component<{}, IAppState> {
     //   this.setState({ results, inProgress: false });
     // })
     let placeSummaries: PlaceSummary[] = await fetchPlaceSummaries(search);
-    let results: PlaceDetails[] = await fetchPlaceDetails(placeSummaries.map(p => p.place_id));
+    let placeIds = placeSummaries.map(p => p.place_id);
+    let results: PlaceDetails[] = await fetchPlaceDetails(placeIds);
     this.setState({ results, inProgress: false });
   }
   render() {
     console.log(this.state.results);
+
+    // if (this.state.results.length > 0) 
     return (
       <div>
-        <Clock description="the time is:"/>
-        <input onChange={(evt) => {
-          this.trySearch(evt.target.value)
-        }} />
-        <PlaceSearchResultList />
+        <input onChange={this.trySearch} />
+        <PlaceSearchResultList {...this.state}/>
       </div>
     );
   }
