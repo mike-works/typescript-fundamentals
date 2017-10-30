@@ -2,7 +2,7 @@ import { wait } from './utils/promise';
 import { task } from './task';
 import { fetchPlaceSummaries, fetchPlaceDetails, PlaceDetails, PlaceSummary } from './utils/places';
 
-export async function autocomplete(term: string): Promise<PlaceDetails[]> {
+export function autocomplete(term: string): Promise<PlaceDetails[]> {
   return task<PlaceDetails[]>(function*() {
     console.log(`⏳ Beginning search for ${term}`);
     // Begin actual query API call
