@@ -10,13 +10,24 @@ export function task<T>(genFn: () => IterableIterator<any>): Promise<T> {
   let p = new Promise<T>((resolve) => {
     let iterator = genFn(); // Get the iterator
     let p  = iterator.next();
-    
+    let lastVal: any = null;
     function doNext() {
-      if (p.done) return;
-      p.value.then((resolved: any) => {
-        p = iterator.next(resolved);
+      if (p.done) {
+        console.log('lastValue=', lastVal);
+        resolve(lastVal);
+        return;
+      }
+      if (isPromise(p.value)){
+        p.value.then((resolved: any) => {
+          lastVal = resolved;
+          p = iterator.next(resolved);
+          doNext();
+        });
+      } else {
+        lastVal = p.value;
+        p = iterator.next(p.value);
         doNext();
-      });
+      }
     }
     doNext();
     // TODO: implement your solution here
@@ -25,11 +36,13 @@ export function task<T>(genFn: () => IterableIterator<any>): Promise<T> {
 }
 
 task(function*() {
-  let x = yield wait(1000);
+  let x = yield wait(100);
   console.log('Tick');
-  yield wait(1000);
-  yield 57
+  yield wait(100);
+  let y = yield 57;
   console.log('Tick');
-  yield wait(1000);
+  yield wait(101);
   console.log('Tick');
-}).then();
+}).then(function() {
+  console.log('boom', arguments);
+});
