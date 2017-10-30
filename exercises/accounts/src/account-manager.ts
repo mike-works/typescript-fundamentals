@@ -4,7 +4,7 @@ interface IUser {
 }
 
 interface IConfirmedUser extends IUser {
-  isActive: true
+  isActive: boolean
 }
 
 interface IAdmin extends IConfirmedUser {
