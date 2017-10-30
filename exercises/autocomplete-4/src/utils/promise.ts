@@ -17,7 +17,7 @@ export function isPromise(x: any) {
 export function wait(time: number) {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve();
+      resolve(time);
     }, time);
   });
 }
