@@ -17,6 +17,7 @@ export class App extends React.Component<{}, IAppState> {
       term: '',
       inProgress: false
     };
+    this.trySearch = this.trySearch.bind(this);
   }
   async trySearch(search: string) {
     this.setState({ inProgress: true, term: search });
@@ -29,6 +30,9 @@ export class App extends React.Component<{}, IAppState> {
     return (
       <div>
         <Clock description="the time is:"/>
+        <input onChange={(evt) => {
+          this.trySearch(evt.target.value)
+        }} />
         <PlaceSearchResultList />
       </div>
     );
