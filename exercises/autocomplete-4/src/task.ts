@@ -6,43 +6,58 @@ import { isPromise, wait } from './utils/promise';
  * @param {any} genFn generator function that yields one or more promises
  * @return {undefined}
  */
-export function task<T>(genFn: () => IterableIterator<any>): Promise<T> {
+export interface Task<T> {
+  promise: Promise<T>
+  cancel: () => void
+  restart?: () => void
+}
+
+export function task<T>(genFn: () => IterableIterator<any>): Task<T> {
+  let cancelled = false;
   let p = new Promise<T>((resolve) => {
     let iterator = genFn(); // Get the iterator
-    let p  = iterator.next();
+    let item  = iterator.next();
     let lastVal: any = null;
     function doNext() {
-      if (p.done) {
+      if (item.done) {
         console.log('lastValue=', lastVal);
         resolve(lastVal);
         return;
       }
-      if (isPromise(p.value)){
-        p.value.then((resolved: any) => {
+      if (isPromise(item.value)){
+        item.value.then((resolved: any) => {
           lastVal = resolved;
-          p = iterator.next(resolved);
-          doNext();
+          if (!cancelled) {
+            item = iterator.next(resolved);
+            doNext();
+          } else {
+            console.log('Cancelled: Not pulling the iterator anymore');
+          }
         });
       } else {
-        lastVal = p.value;
-        p = iterator.next(p.value);
+        lastVal = item.value;
+        item = iterator.next(item.value);
         doNext();
       }
     }
     doNext();
     // TODO: implement your solution here
   });
-  return p;
+  function cancelFn(){
+    console.log("⛔️ Cancelled!");
+    cancelled = true;
+  }
+  return {promise: p, cancel: cancelFn};
 }
 
-task(function*() {
-  let x = yield wait(100);
-  console.log('Tick');
-  yield wait(100);
-  let y = yield 57;
-  console.log('Tick');
-  yield wait(101);
-  console.log('Tick');
-}).then(function() {
-  console.log('boom', arguments);
-});
+// task(function*() {
+//   let x = yield wait(100);
+//   console.log('Tick');
+//   yield wait(100);
+//   let y = yield 57;
+//   console.log('Tick');
+//   yield wait(101);
+//   console.log('Tick');
+// }).then(function() {
+//   console.log('boom', arguments);
+// });

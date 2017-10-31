@@ -4,11 +4,12 @@ import { shortUrl } from './utils/string';
 import { PlaceDetails } from './utils/places';
 import { PlaceSearchResult } from './place-search-result';
 import { PlaceSearchResultList } from './place-search-result-list';
+import { Task } from './task';
 
 interface IPlaceSearchContainerState {
   results: PlaceDetails[];
   term: string,
-  existingSearch?: Promise<PlaceDetails[]>;
+  existingSearch?: Task<PlaceDetails[]>;
 }
 
 export class PlaceSearchContainer extends React.Component<{}, IPlaceSearchContainerState> {
@@ -31,15 +32,16 @@ export class PlaceSearchContainer extends React.Component<{}, IPlaceSearchContai
    * @return {undefined}
    */
   beginSearch(term: string) {
-    
+    let { existingSearch } = this.state;
+    if (existingSearch) {existingSearch.cancel();}
     // Kick off the new search, with the new search term
-    let p = autocomplete(term);
+    let task = autocomplete(term);
     // Update the existingSearch state, so our component re-renders
     //   (probably to update the "Searching for <term>..." message)
-    this.setState({ term, existingSearch: p, results: [] });
+    this.setState({ term, existingSearch: task, results: [] });
     // Attach a promise handler to the search.
     //  THIS WILL ONLY BE INVOKED IF THE SEARCH RUNS TO COMPLETION
-    p.then((results) => {
+    task.promise.then((results) => {
       // When the search completes, update the "results" state, triggering a re-render
       this.setState({ results, existingSearch: undefined });
     });
