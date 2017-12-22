@@ -19,3 +19,5 @@ env:
 branches:
   only:
   - solutions
+  - linkedin/final
+  - femasters/final
