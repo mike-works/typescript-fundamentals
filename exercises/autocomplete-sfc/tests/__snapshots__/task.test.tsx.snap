@@ -9,7 +9,9 @@ exports[`renders correctly if place has a website 1`] = `
     src="https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png"
   />
   <h3>
+     
     Donut Hut
+     
   </h3>
   <p>
     <a
@@ -18,9 +20,7 @@ exports[`renders correctly if place has a website 1`] = `
     >
       31 Little Canada Road East, Little Canada
     </a>
-     
-    -
-     
+      -  
     <a
       href="http://example.com"
       target="_blank"
@@ -40,7 +40,9 @@ exports[`renders correctly if place is missing a website 1`] = `
     src="https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png"
   />
   <h3>
+     
     Donut Hut
+     
   </h3>
   <p>
     <a
@@ -49,10 +51,13 @@ exports[`renders correctly if place is missing a website 1`] = `
     >
       31 Little Canada Road East, Little Canada
     </a>
-     
-    -
-     
-    
+      -  
+    <a
+      href={undefined}
+      target="_blank"
+    >
+      
+    </a>
   </p>
 </li>
 `;
