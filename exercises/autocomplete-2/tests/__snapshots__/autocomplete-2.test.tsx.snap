@@ -3,7 +3,7 @@
 exports[`PlaceSearchResultList renders correctly for "in progress" state 1`] = `
 <div>
   <h2>
-    Search for a place
+    Search for a place 
   </h2>
   <input
     onChange={[Function]}
@@ -18,7 +18,7 @@ exports[`PlaceSearchResultList renders correctly for "in progress" state 1`] = `
     >
       Searching for 
       xylophone
-      ...
+       ...
     </li>
   </ul>
 </div>
@@ -27,7 +27,7 @@ exports[`PlaceSearchResultList renders correctly for "in progress" state 1`] = `
 exports[`PlaceSearchResultList renders correctly for "not yet started" state 1`] = `
 <div>
   <h2>
-    Search for a place
+    Search for a place 
   </h2>
   <input
     onChange={[Function]}
@@ -37,8 +37,10 @@ exports[`PlaceSearchResultList renders correctly for "not yet started" state 1`]
   <ul
     className="results"
   >
-    <li>
-      Type something in above to search
+    <li
+      className="blue"
+    >
+      Please enter a search term above
     </li>
   </ul>
 </div>
@@ -47,7 +49,7 @@ exports[`PlaceSearchResultList renders correctly for "not yet started" state 1`]
 exports[`PlaceSearchResultList renders correctly for populated set of results 1`] = `
 <div>
   <h2>
-    Search for a place
+    Search for a place 
   </h2>
   <input
     onChange={[Function]}
