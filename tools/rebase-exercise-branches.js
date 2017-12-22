@@ -14,6 +14,7 @@ const EXERCISE_SETS = {
     'femasters/7-begin', 'femasters/7-complete',
     'femasters/8-begin', 'femasters/8-complete',
     'femasters/9-begin', 'femasters/9-complete',
+    'femasters/10-begin', 'femasters/10-complete',
     'femasters/final'
   ],
   linkedin: [
@@ -27,6 +28,7 @@ const EXERCISE_SETS = {
     'linkedin/7-begin', 'linkedin/7-complete',
     'linkedin/8-begin', 'linkedin/8-complete',
     'linkedin/9-begin', 'linkedin/9-complete',
+    'linkedin/10-begin', 'linkedin/10-complete',
     'linkedin/final'
   ]
 };
