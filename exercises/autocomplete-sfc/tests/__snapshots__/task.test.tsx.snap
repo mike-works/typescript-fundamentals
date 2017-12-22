@@ -9,9 +9,7 @@ exports[`renders correctly if place has a website 1`] = `
     src="https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png"
   />
   <h3>
-     
     Donut Hut
-     
   </h3>
   <p>
     <a
@@ -42,9 +40,7 @@ exports[`renders correctly if place is missing a website 1`] = `
     src="https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png"
   />
   <h3>
-     
     Donut Hut
-     
   </h3>
   <p>
     <a
