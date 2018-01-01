@@ -5,6 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/mike-north/typescript-workshop",
   "author": "Mike North <michael.l.north@gmail.com> (https://mike.works)",
+  "license": "bsd-3-clause",
   "scripts": {
     "clean": "rimraf dist",
     "test": "jest --watch --no-cache",
