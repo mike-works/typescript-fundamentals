@@ -26,3 +26,4 @@ branches:
   - solutions
   - linkedin/final
   - femasters/final
+  - /^greenkeeper/.*$/
