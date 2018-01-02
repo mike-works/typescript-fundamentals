@@ -12,4 +12,3 @@ before_install:
 before_script: greenkeeper-lockfile-update
 # Only the node version 6 job will upload the lockfile
 after_script: greenkeeper-lockfile-upload
-
