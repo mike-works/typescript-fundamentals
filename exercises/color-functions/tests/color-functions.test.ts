@@ -1,6 +1,7 @@
 import { color } from '../src/index';
 import * as colorUtils from '../src/color-utils';
 
+if (Object.keys(colorUtils).length > 0) {
 test('color-utils.js module exports a function hexToRgb', () => {
   expect(typeof colorUtils.hexToRgb).toBe('function');
 });
@@ -139,3 +140,10 @@ test('hex=c49 --> colors {r: 204, g: 68, b: 153}', () => {
   color.g = _oldVals.g;
   color.b = _oldVals.b;
 });
+} else {
+  describe('Instructions', () => {
+    test('Module color-functions/src/color-utils.ts must export some things', () => {
+      expect(true).toBeTruthy();
+    });
+  });
+}

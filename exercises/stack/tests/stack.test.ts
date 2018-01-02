@@ -1,7 +1,7 @@
 import { Stack } from '../src/stack';
 
 let exp = expect as jest.Expect;
-
+if (Stack) {
 test('Stack is available as a named export from ./src/stack.ts', () => {
   exp(Stack).toBeDefined();
 });
@@ -51,3 +51,10 @@ test('pop() returns undefined if the list is empty', () => {
   let last = l.pop();
   exp(last).toBeUndefined();
 });
+} else {
+  describe('Instructions', () => {
+    test('Please uncomment the Stack class in stack/src/stack.ts', () => {
+      expect(true).toBeTruthy();
+    });
+  });
+}

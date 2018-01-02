@@ -1,3 +1,3 @@
-export function cashier() {
-  return {};
-}
+// export function cashier() {
+//   return {};
+// }
