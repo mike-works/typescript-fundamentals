@@ -2,28 +2,13 @@ language: node_js
 node_js:
 - 'stable'
 
+cache: 'yarn'
+
 script: npm run test:ci
 
-env:
-  - EXERCISE=cashier
-  - EXERCISE=accounts
-  - EXERCISE=dealer
-  - EXERCISE=color-functions
-  - EXERCISE=stack
-  - EXERCISE=fib
-  - EXERCISE=autocomplete-sfc
-  - EXERCISE=autocomplete-2
-  - EXERCISE=autocomplete-3
-  - EXERCISE=autocomplete-4
 before_install:
 - npm install -g npm
 - npm install -g greenkeeper-lockfile@1
 before_script: greenkeeper-lockfile-update
 # Only the node version 6 job will upload the lockfile
 after_script: greenkeeper-lockfile-upload
-branches:
-  only:
-  - solutions
-  - linkedin/final
-  - femasters/final
-  - /^greenkeeper/.*$/
