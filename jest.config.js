@@ -1,3 +1,4 @@
+// @ts-check
 // jest.config.js
 module.exports = {
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
