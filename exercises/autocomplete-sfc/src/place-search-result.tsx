@@ -1,6 +1,19 @@
 import * as React from 'react';
-export const PlaceSearchResult: React.SFC<any> = () => {
+import { PlaceDetails } from './utils/places';
+export const PlaceSearchResult: React.SFC<PlaceDetails> = (pd) => {
   return (
-    <div></div>
+    <li className="search-result">
+      <img className="icon" src={pd.icon} />
+      <h3>{pd.name}</h3>
+      <p>
+        <a href={pd.url} target="_blank">
+          {pd.vicinity}
+        </a>
+          -
+        <a href={pd.website} target="_blank">
+          {pd.website}
+        </a>
+      </p>
+    </li>
   );
 };

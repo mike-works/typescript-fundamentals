@@ -18,7 +18,7 @@ test('Activating a new user', () => {
   let am = new AccountManager();
   let admin = { email: 'lisa@example.com', password: '23456Seven', isActive: true, adminSince: new Date()};
   let newUser = am.register('mike@example.com', '123456Seven');
-  let activatedUser = am.activateNewUser(admin, newUser);
+  let activatedUser = am.activateNewUser(admin as any, newUser);
   
   exp(activatedUser).toBeDefined();
   exp(activatedUser.email).toEqual('mike@example.com');
@@ -30,8 +30,8 @@ test('Promoting an activated user to admin', () => {
   let am = new AccountManager();
   let admin = { email: 'lisa@example.com', password: '23456Seven', isActive: true, adminSince: new Date()};
   let newUser = am.register('mike@example.com', '123456Seven');
-  let activatedUser = am.activateNewUser(admin, newUser);
-  let newAdmin = am.promoteToAdmin(admin, activatedUser);
+  let activatedUser = am.activateNewUser(admin as any, newUser);
+  let newAdmin = am.promoteToAdmin(admin as any, activatedUser);
   
   exp(newAdmin).toBeDefined();
   exp(newAdmin.email).toEqual('mike@example.com');
