@@ -6,7 +6,7 @@ import { PlaceDetails } from '../src/utils/places';
 let hasStudentSolution: boolean = true;
 
 hasStudentSolution =
-  JSON.stringify(renderer.create(<PlaceSearchResultList />).toJSON()) !==
+  JSON.stringify(renderer.create(<PlaceSearchResultList results={[]} inProgress term='foo' />).toJSON()) !==
   JSON.stringify({ type: 'pre', props: {}, children: ['{"0":{},"1":{}}'] });
 
 if (hasStudentSolution) {
