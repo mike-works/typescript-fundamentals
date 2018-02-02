@@ -30,3 +30,27 @@ export function cashier(): CartAPI {
     }
   };
 }
+
+
+
+
+// function getRemoteData(url: string, method: 'get'): Promise<Response>;
+// function getRemoteData(url: string, method: 'post', csrf: string): Promise<Response>;
+
+// function getRemoteData(url: string, method: 'get' | 'post', csrf?: string): Promise<Response> {
+//   if (method === 'get') {
+//     return fetch (url);
+//   } else {
+//     let token = csrf as string; // signature #2 csrf is non-optional
+//     return fetch(url, {
+//       headers: {
+//         token
+//       }
+//     })
+//   }
+// }
+
+
+
+
+// getRemoteData('', 'get');
