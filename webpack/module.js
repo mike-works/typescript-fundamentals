@@ -29,7 +29,12 @@ module.exports = function generateWebpackModule(env) {
             loader: "babel-loader"
           },
           {
-            loader: "awesome-typescript-loader"
+            loader: "awesome-typescript-loader",
+            options: {
+              reportFiles: [
+                `exercises/${env}/**/*.{ts,tsx}`
+              ] 
+            }
           }
         ],
         include: path.join(exercises.exercisePath(env), "src")

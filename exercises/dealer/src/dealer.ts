@@ -12,6 +12,6 @@ function shuffleArray(a: any[]) {
   }
 }
 
-// export class Dealer {
+export class Dealer {
 
-// }
+}

@@ -1,2 +1,2 @@
 #!/bin/bash
-jest --watch --no-cache
+./node_modules/.bin/jest --no-cache --watch $2
