@@ -16,7 +16,7 @@ if (cashier) {
   });
 
   describe('structure of object returned by cashier function is correct', () => {
-    let x = cashier();
+    let x = cashier() as any;
     test('cashier().add() function is found', () => {
       expect(typeof x.add).toBe('function');
     });
@@ -29,7 +29,7 @@ if (cashier) {
   });
 
   describe('adding each item via cart.addItem(CartItem), increases length as appropriate', () => {
-    let c = module.cashier();
+    let c = module.cashier() as any;
     test('cart.length is initially zero', () => {
       expect(c.length).toBe(0);
     });
@@ -44,7 +44,7 @@ if (cashier) {
   });
 
   describe('adding items via add(name, price, qty) works', () => {
-    let c = module.cashier();
+    let c = module.cashier() as any;
     test('cart.length is initially zero', () => {
       expect(c.length).toBe(0);
     });
@@ -59,7 +59,7 @@ if (cashier) {
   });
 
   describe('If not specified, quantity is assumed to be 1', () => {
-    let c = module.cashier();
+    let c = module.cashier() as any;
     test('cart.length is initially zero', () => {
       expect(c.length).toBe(0);
     });
@@ -74,7 +74,7 @@ if (cashier) {
   });
 
   describe('adding each item, increases total as appropriate', () => {
-    let c = module.cashier();
+    let c = module.cashier() as any;
     test('total is initially zero', () => {
       expect(c.total).toBe(0);
     });
@@ -89,7 +89,7 @@ if (cashier) {
   });
 
   describe('chaining to add a few items', () => {
-    let c = cashier();
+    let c = cashier() as any;
     test('add a few items by chaining', () => {
       let tot = c.addItem({ name: 'Grapes', price: 1.12, qty: 2 }).addItem({ name: 'Pears', price: 3.51, qty: 5 })
         .total;
