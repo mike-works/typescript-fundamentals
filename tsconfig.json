@@ -3,7 +3,7 @@
     "target": "ES5",
     "jsx": "react",
     "module": "commonjs",
-    "noEmitOnError": true,
+    "noEmitOnError": false,
     "strict": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
