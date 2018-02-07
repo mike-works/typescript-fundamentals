@@ -1,4 +1,6 @@
-import { Dealer, Suit, CardNumber } from '../src/dealer';
+import * as D from '../src/dealer';
+
+const { Dealer, Suit, CardNumber } = D as any;
 
 let exp = expect as jest.Expect;
 
