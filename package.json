@@ -45,7 +45,7 @@
     "sass-loader": "^6.0.3",
     "scripty": "^1.7.2",
     "style-loader": "^0.20.0",
-    "ts-node": "^4.0.0",
+    "ts-node": "^5.0.0",
     "tslint": "^5.1.0",
     "tslint-loader": "^3.5.3",
     "tslint-microsoft-contrib": "^5.0.0",
