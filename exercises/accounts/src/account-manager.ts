@@ -10,6 +10,7 @@ export interface Admin extends User {
 
 export interface AdminCandidate extends User {
   adminSince: Date,
+  isActive: true,
 }
 
 export class AccountManager {
