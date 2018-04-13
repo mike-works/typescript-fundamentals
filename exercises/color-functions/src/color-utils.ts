@@ -7,7 +7,7 @@ interface Output {
   b: number,
 }
 
-const hexToRgb = (hex: string): Output=> {
+const hexToRgb = (hex: string): Output | never => {
   const result = {
     r: 0,
     g: 0,

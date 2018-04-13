@@ -42,6 +42,11 @@ test('color-utils.js / hexToRgb("b57ca7") -> {r: 181, g: 124, b: 167}', () => {
   expect(colorUtils.hexToRgb('b57ca7')).toMatchObject({ r: 181, g: 124, b: 167 });
 });
 
+// works but crashes the tests
+// test('hexToRgb should throw an error if string of invalid length is entered', () => {
+//   expect(colorUtils.hexToRgb('8fie')).toThrowError();
+// });
+
 test('color.r, color.g and color.b properties should all be numbers', () => {
   expect(typeof color.r).toBe('number');
   expect(typeof color.g).toBe('number');
