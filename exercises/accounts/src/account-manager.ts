@@ -1,5 +1,5 @@
 export class AccountManager {
-  users = new Array();
+  users: IUSer[] = new Array();
 
   /**
    * Create a new user account
@@ -34,11 +34,12 @@ export class AccountManager {
    * @param user an active user who you're making an admin
    * @return the updated user object, now can also be regarded as an admin
    */
-  promoteToAdmin(existingAdmin: IAdmin, user: IAdmin): IAdmin | never {
+  promoteToAdmin(existingAdmin: IAdmin, user: IUSer): IAdmin | never {
     if (!existingAdmin.adminSince) throw "Not an admin!";
     if (user.isActive !== true) throw "User must be active in order to be promoted to admin!";
-    user.adminSince = new Date();
-    return user;
+    let userCandidate = user as IAdminCandidate;
+    userCandidate.adminSince = new Date();
+    return userCandidate;
   }
 }
 
@@ -49,6 +50,13 @@ export interface IUSer {
 }
 
 export interface IAdmin {
+  email: string,
+  password: string,
+  isActive: boolean,
+  adminSince: Date,
+}
+
+export interface IAdminCandidate {
   email: string,
   password: string,
   isActive: boolean,
