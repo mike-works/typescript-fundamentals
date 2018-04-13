@@ -1,17 +1,13 @@
 // hexToRgb('ff0000') => {r: 255, g: 0, b: 0}
 // hexToRgb('f00') => { r: 255, g: 0, b: 0 }
 
-// interface Output {
-//   r: number,
-//   g: number,
-//   b: number,
-// }
-
-const hexToRgb = (hex: string): {
+interface Output {
   r: number,
   g: number,
   b: number,
-} => {
+}
+
+const hexToRgb = (hex: string): Output=> {
   const result = {
     r: 0,
     g: 0,
