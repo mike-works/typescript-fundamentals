@@ -1,9 +1,22 @@
-//TODO: Implement hexToRgb
 // hexToRgb('ff0000') => {r: 255, g: 0, b: 0}
 // hexToRgb('f00') => { r: 255, g: 0, b: 0 }
 
-const hexToRgb = (hex: string): object => {
-  const result = {};
+// interface Output {
+//   r: number,
+//   g: number,
+//   b: number,
+// }
+
+const hexToRgb = (hex: string): {
+  r: number,
+  g: number,
+  b: number,
+} => {
+  const result = {
+    r: 0,
+    g: 0,
+    b: 0,
+  };
   if (hex.length === 3) {
     const red = parseInt(`${hex[0]}${hex[0]}`, 16);
     Object.assign(result, { r: red});
@@ -24,7 +37,6 @@ const hexToRgb = (hex: string): object => {
   return result;
 };
 
-//TODO: Implement rgbToHex
 // rgbToHex(255, 0, 0) => 'ff0000'
 
 const rgbToHex = (r: number, g: number, b: number): string => {

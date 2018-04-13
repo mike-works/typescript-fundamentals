@@ -4,5 +4,5 @@ dist
 typings
 npm-debug*
 yarn-error*
-tocopy*
+scratch*
 apikeys.js
