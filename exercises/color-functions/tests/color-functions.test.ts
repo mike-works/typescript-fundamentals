@@ -18,6 +18,14 @@ test('color-utils.js / rgbToHex(255, 255, 255) --> "ffffff"', () => {
   expect(colorUtils.rgbToHex(255, 255, 255)).toBe('ffffff');
 });
 
+test('color-utils.js / rgbToHex(193, 66, 66) --> "c14242"', () => {
+  expect(colorUtils.rgbToHex(193, 66, 66)).toBe('c14242');
+});
+
+test('color-utils.js / rgbToHex(146, 195, 226) --> "92c3e2"', () => {
+  expect(colorUtils.rgbToHex(146, 195, 226)).toBe('92c3e2');
+});
+
 test('color-utils.js / hexToRgb("ff0000") -> {r: 255, g: 0, b: 0}', () => {
   expect(colorUtils.hexToRgb('ff0000')).toMatchObject({r: 255, g: 0, b: 0});
 });
@@ -25,6 +33,19 @@ test('color-utils.js / hexToRgb("ff0000") -> {r: 255, g: 0, b: 0}', () => {
 test('color-utils.js / hexToRgb("f00") -> {r: 255, g: 0, b: 0}', () => {
   expect(colorUtils.hexToRgb('f00')).toMatchObject({r: 255, g: 0, b: 0});
 });
+
+test('color-utils.js / hexToRgb("f3c") -> {r: 255, g: 51, b: 204}', () => {
+  expect(colorUtils.hexToRgb('f3c')).toMatchObject({ r: 255, g: 51, b: 204 });
+});
+
+test('color-utils.js / hexToRgb("b57ca7") -> {r: 181, g: 124, b: 167}', () => {
+  expect(colorUtils.hexToRgb('b57ca7')).toMatchObject({ r: 181, g: 124, b: 167 });
+});
+
+// works but crashes the tests
+// test('hexToRgb should throw an error if string of invalid length is entered', () => {
+//   expect(colorUtils.hexToRgb('8fie')).toThrowError();
+// });
 
 test('color.r, color.g and color.b properties should all be numbers', () => {
   expect(typeof color.r).toBe('number');
