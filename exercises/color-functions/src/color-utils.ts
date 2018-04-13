@@ -36,9 +36,13 @@ const hexToRgb = (hex: string): Output=> {
 // rgbToHex(255, 0, 0) => 'ff0000'
 
 const rgbToHex = (r: number, g: number, b: number): string => {
-  const red = r.toString(16).length === 1 ? `0${r.toString(16)}` : r.toString(16);
-  const green = g.toString(16).length === 1 ? `0${g.toString(16)}` : g.toString(16);
-  const blue = b.toString(16).length === 1 ? `0${b.toString(16)}` : b.toString(16);
+  const stringified = (num: number): string => {
+    return Math.max(0, Math.min(255, num)).toString(16);
+  };
+
+  const red = stringified(r).length === 1 ? `0${stringified(r)}` : stringified(r);
+  const green = stringified(g).length === 1 ? `0${stringified(g)}` : stringified(g);
+  const blue = stringified(b).length === 1 ? `0${stringified(b)}` : stringified(b);
   return `${red}${green}${blue}`.toLowerCase();
 }
 
