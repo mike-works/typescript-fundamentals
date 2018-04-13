@@ -39,7 +39,7 @@ const rgbToHex = (r: number, g: number, b: number): string => {
   const red = r.toString(16) === '0' ? '00' : r.toString(16);
   const green = g.toString(16) === '0' ? '00' : g.toString(16);
   const blue = b.toString(16) === '0' ? '00' : b.toString(16);
-  return `${red}${green}${blue}`;
+  return `${red}${green}${blue}`.toLowerCase();
 }
 
 export {
