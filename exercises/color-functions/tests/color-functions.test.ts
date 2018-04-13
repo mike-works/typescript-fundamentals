@@ -34,6 +34,14 @@ test('color-utils.js / hexToRgb("f00") -> {r: 255, g: 0, b: 0}', () => {
   expect(colorUtils.hexToRgb('f00')).toMatchObject({r: 255, g: 0, b: 0});
 });
 
+test('color-utils.js / hexToRgb("f3c") -> {r: 255, g: 51, b: 204}', () => {
+  expect(colorUtils.hexToRgb('f3c')).toMatchObject({ r: 255, g: 51, b: 204 });
+});
+
+test('color-utils.js / hexToRgb("b57ca7") -> {r: 181, g: 124, b: 167}', () => {
+  expect(colorUtils.hexToRgb('b57ca7')).toMatchObject({ r: 181, g: 124, b: 167 });
+});
+
 test('color.r, color.g and color.b properties should all be numbers', () => {
   expect(typeof color.r).toBe('number');
   expect(typeof color.g).toBe('number');
