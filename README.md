@@ -27,8 +27,9 @@ This is the example project used for the <a title="Mike.Works" href="https://mik
 </p>
 
 # Start Here
-  * [📺 Here are the slides](https://docs.mike.works/typescript-slides) for the workshop.
-  * [🔍 Here's the course outline](https://mike.works/course/typescript-fundamentals-7832c19).
+
+* [📺 Here are the slides](https://docs.mike.works/typescript-slides) for the workshop.
+* [🔍 Here's the course outline](https://mike.works/course/typescript-fundamentals-7832c19).
 
 # What's in this project?
 
