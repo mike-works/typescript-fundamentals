@@ -26,9 +26,11 @@
 This is the example project used for the <a title="Mike.Works" href="https://mike.works">Mike.Works</a> <a title="TypeScript Fundamentals" href="https://mike.works/course/typescript-fundamentals-7832c19">TypeScript Fundamentals</a> course.
 </p>
 
-# What are the pieces?
+# Start Here
+  * [📺 Here are the slides](https://docs.mike.works/typescript-slides) for the workshop.
+  * [🔍 Here's the course outline](https://mike.works/course/typescript-fundamentals-7832c19).
 
-
+# What's in this project?
 
 * [Webpack 3](https://webpack.js.org)
 * [TypeScript](https://www.typescriptlang.org) 2.5, setup for experimental decorator support
