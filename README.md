@@ -12,12 +12,6 @@
   <a href="https://travis-ci.org/mike-works/typescript-fundamentals" title="Build Status">
     <img title="Build Status" src="https://travis-ci.org/mike-works/typescript-fundamentals.svg?branch=solutions"/>
   </a>
-  <a href="https://mike.works/course/typescript-fundamentals-7832c19" title="TypeScript Fundamentals">
-    <img title="Course Outline" src="https://img.shields.io/badge/mike.works-course%20outline-blue.svg"/>
-  </a>
-  <a href="https://docs.mike.works/typescript-slides" title="Slides">
-    <img title="Slides" src="https://img.shields.io/badge/mike.works-slides-blue.svg"/>
-  </a>
   <a title='GreenKeeper'>
     <img title='GreenKeeper' src='https://badges.greenkeeper.io/mike-works/typescript-fundamentals.svg'>
   </a>
