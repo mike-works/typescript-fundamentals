@@ -7,8 +7,8 @@ interface IAppState {
 }
 
 export class App extends React.Component<{}, IAppState> {
-  constructor() {
-    super();
+  constructor(opts: any) {
+    super(opts);
     this.state = {
       results: []
     };
@@ -23,7 +23,7 @@ export class App extends React.Component<{}, IAppState> {
     let placeResults = this.state.results.map(pr => {
       /////////////////////////////////////////////
       // 👇 Replace this with your new <PlaceSearchResult /> component //
-      return <p key={pr.id}>{pr.name}</p>;
+      return <PlaceSearchResult {...pr } />;
       // return <PlaceSearchResult {...pr}/>;
     });
     return (

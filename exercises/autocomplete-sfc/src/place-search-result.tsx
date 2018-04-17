@@ -1,6 +1,9 @@
 import * as React from 'react';
-export const PlaceSearchResult: React.SFC<any> = () => {
-  return (
-    <div></div>
-  );
+import { PlaceDetails } from '../../autocomplete-2/src/utils/places';
+
+export const PlaceSearchResult: React.SFC<PlaceDetails> = data => {
+  return <li>
+      <img src={data.icon} alt="" />
+      {data.name}
+    </li>;
 };

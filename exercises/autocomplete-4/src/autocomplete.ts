@@ -1,10 +1,18 @@
 import { wait } from './utils/promise';
-import { task } from './task';
+import { task, CancellablePromise } from './task';
 import { fetchPlaceSummaries, fetchPlaceDetails, PlaceDetails, PlaceSummary } from './utils/places';
 
-export async function autocomplete(term: string): Promise<PlaceDetails[]> {
+const timeout = (n: number) =>
+  new Promise(resolve =>
+    setTimeout(() => {
+      resolve(`Waited ${n}`);
+    }, n)
+  );
+
+export function autocomplete(term: string): CancellablePromise<PlaceDetails[]> {
   return task<PlaceDetails[]>(function*() {
     console.log(`⏳ Beginning search for ${term}`);
+    yield timeout(500);
     // Begin actual query API call
     let placeResults: PlaceSummary[] = yield fetchPlaceSummaries(term);
     console.log(`✅ Completed search for ${term}`);

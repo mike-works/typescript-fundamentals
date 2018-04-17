@@ -4,16 +4,17 @@ import { shortUrl } from './utils/string';
 import { PlaceDetails } from './utils/places';
 import { PlaceSearchResult } from './place-search-result';
 import { PlaceSearchResultList } from './place-search-result-list';
+import { CancellablePromise } from './task';
 
 interface IPlaceSearchContainerState {
   results: PlaceDetails[];
   term: string,
-  existingSearch?: Promise<PlaceDetails[]>;
+  existingSearch?: CancellablePromise<PlaceDetails[]>;
 }
 
 export class PlaceSearchContainer extends React.Component<{}, IPlaceSearchContainerState> {
-  constructor() {
-    super();
+  constructor(opts: any) {
+    super(opts);
     this.state = {
       term: '',
       results: [], // List of search results
@@ -36,6 +37,9 @@ export class PlaceSearchContainer extends React.Component<{}, IPlaceSearchContai
     let p = autocomplete(term);
     // Update the existingSearch state, so our component re-renders
     //   (probably to update the "Searching for <term>..." message)
+    if (typeof this.state.existingSearch !== 'undefined') {
+      this.state.existingSearch.cancel();
+    }
     this.setState({ term, existingSearch: p, results: [] });
     // Attach a promise handler to the search.
     //  THIS WILL ONLY BE INVOKED IF THE SEARCH RUNS TO COMPLETION
