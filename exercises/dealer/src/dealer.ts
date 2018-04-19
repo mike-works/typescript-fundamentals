@@ -3,16 +3,15 @@
  * @param cards Array to shuffle
  */
 
- enum Suit {
+ export enum Suit {
     Clubs,
     Diamonds,
     Hearts,
     Spades,
  }
 
- enum CardNumber {
+ export enum CardNumber {
    Ace,
-   One,
    Two,
    Three,
    Four,
@@ -32,7 +31,9 @@
    [Suit.Spades, CardNumber.Ace],
  ];
 
-function shuffleArray(cards: any[]) {
+ const test:Card = [0, 6];
+
+function shuffleArray(cards: Card[]) {
   // Iterate over the array
   for (let i = cards.length; i; i--) {
     // Get next index
@@ -41,11 +42,14 @@ function shuffleArray(cards: any[]) {
     [cards[i - 1], cards[j]] = [cards[j], cards[i - 1]];
   }
 }
-
 export class Dealer {
   cards: Card[];
 
   constructor(cards: Card[]) {
     this.cards = cards || [];
+  }
+
+  readCard = (card: Card): string => {
+    return `${CardNumber[card[1]]} of ${Suit[card[0]]}`;
   }
 }
