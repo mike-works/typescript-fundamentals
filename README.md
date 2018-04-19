@@ -9,21 +9,26 @@
   </a>
 </p>
 <p align='center'>
+  <a href="https://greenkeeper.io/" title="Dependencies">
+    <img title='GreenKeeper' src='https://badges.greenkeeper.io/mike-works/typescript-fundamentals.svg'>
+  </a>
   <a href="https://travis-ci.org/mike-works/typescript-fundamentals" title="Build Status">
     <img title="Build Status" src="https://travis-ci.org/mike-works/typescript-fundamentals.svg?branch=solutions"/>
   </a>
-  <a title='GreenKeeper'>
-    <img title='GreenKeeper' src='https://badges.greenkeeper.io/mike-works/typescript-fundamentals.svg'>
+  <a href="https://mike.works/course/typescript-fundamentals-7832c19" title="Typescript Fundamentals">
+    <img title="Course Outline" src="https://img.shields.io/badge/mike.works-course%20outline-blue.svg"/>
+  </a>
+  <a href="https://docs.mike.works/typescript-slides" title="Slides">
+    <img title="Slides" src="https://img.shields.io/badge/mike.works-slides-blue.svg"/>
   </a>
 </p>
 <p align='center'>
 This is the example project used for the <a title="Mike.Works" href="https://mike.works">Mike.Works</a> <a title="TypeScript Fundamentals" href="https://mike.works/course/typescript-fundamentals-7832c19">TypeScript Fundamentals</a> course.
 </p>
 
-# Start Here
-
-* [📺 Here are the slides](https://docs.mike.works/typescript-slides) for the workshop.
-* [🔍 Here's the course outline](https://mike.works/course/typescript-fundamentals-7832c19).
+# Course outline and slides
+ * [View course outline here](https://mike.works/course/typescript-fundamentals-7832c19)
+ * [View slides here](https://docs.mike.works/typescript-slides)
 
 # What's in this project?
 
