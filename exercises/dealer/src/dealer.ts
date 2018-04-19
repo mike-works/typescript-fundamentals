@@ -1,17 +1,51 @@
 /**
  * Shuffle an array in place
- * @param a Array to shuffle
+ * @param cards Array to shuffle
  */
-function shuffleArray(a: any[]) {
+
+ enum Suit {
+    Clubs,
+    Diamonds,
+    Hearts,
+    Spades,
+ }
+
+ enum CardNumber {
+   Ace,
+   One,
+   Two,
+   Three,
+   Four,
+   Five,
+   Six,
+   Seven,
+   Eight,
+   Nine,
+   Jack,
+   Queen,
+   King,
+ }
+
+ type Card = [Suit, CardNumber];
+
+ const sample: Card[] = [
+   [Suit.Spades, CardNumber.Ace],
+ ];
+
+function shuffleArray(cards: any[]) {
   // Iterate over the array
-  for (let i = a.length; i; i--) {
+  for (let i = cards.length; i; i--) {
     // Get next index
     let j = Math.floor(Math.random() * i);
     // Swap positions
-    [a[i - 1], a[j]] = [a[j], a[i - 1]];
+    [cards[i - 1], cards[j]] = [cards[j], cards[i - 1]];
   }
 }
 
-// export class Dealer {
+export class Dealer {
+  cards: Card[];
 
-// }
+  constructor(cards: Card[]) {
+    this.cards = cards || [];
+  }
+}
