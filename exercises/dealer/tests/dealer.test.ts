@@ -1,8 +1,7 @@
-import * as D from '../src/dealer';
-
-const { Dealer, Suit, CardNumber } = D as any;
+import { Dealer, Suit, CardNumber } from '../src/dealer';
 
 let exp = expect as jest.Expect;
+type Card = [Suit, CardNumber];
 
 if (Dealer) {
   test('Dealer is available as a named export from ./src/dealer.ts', () => {
@@ -75,7 +74,7 @@ if (Dealer) {
     let cards = dealer.dealHand(52);
     let numberCounts = new Array(13).fill(0, 0);
     let suitCounts = new Array(4).fill(0, 0);
-    cards.forEach(([suit, number]) => {
+    cards.forEach(([suit, number]: Card) => {
       numberCounts[number]++;
       suitCounts[suit]++;
     });
@@ -95,7 +94,7 @@ if (Dealer) {
   test('Cards are represented as [Suit(0-3), CardNumber(0-12)]', () => {
     let dealer = new Dealer();
     let cards = dealer.dealHand(52);
-    cards.forEach(([suit, num]) => {
+    cards.forEach(([suit, num]: Card) => {
       exp(suit).toBeLessThan(4);
       exp(suit).toBeGreaterThan(-1);
       exp(num).toBeLessThan(13);
