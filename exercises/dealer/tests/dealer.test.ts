@@ -102,6 +102,16 @@ if (Dealer) {
       exp(num).toBeGreaterThan(-1);
     });
   });
+
+  test('resetCards should unshuffle the deck', () => {
+    const dealer = new Dealer();
+    const origCards = dealer.cards;
+    dealer.shuffleCards(dealer.cards);
+    dealer.shuffleCards(dealer.cards);
+    dealer.shuffleCards(dealer.cards);
+    dealer.resetCards();
+    exp(dealer.cards).toEqual(origCards);
+  });
 } else {
   describe('Instructions', () => {
     test('Please uncomment the Dealer class in dealer/src/dealer.ts', () => {
