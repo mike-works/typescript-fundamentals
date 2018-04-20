@@ -54,12 +54,12 @@ if (Dealer) {
   test('dealer.dealHand(numCards) throws an error if you ask for too many cards', () => {
     let dealer = new Dealer();
     exp(() => {
-      dealer.dealHand(10);
-      dealer.dealHand(10);
-      dealer.dealHand(10);
-      dealer.dealHand(10);
-      dealer.dealHand(10);
-      dealer.dealHand(10);
+      dealer.dealHand(53);
+      dealer.dealHand(53);
+      dealer.dealHand(53);
+      dealer.dealHand(53);
+      dealer.dealHand(53);
+      dealer.dealHand(53);
     }).toThrow();
   });
 

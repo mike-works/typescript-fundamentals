@@ -83,7 +83,7 @@ const cards: Card[] = [
   [Suit.Spades, CardNumber.Joker],
 ];
 
-function shuffleArray(cards: Card[]) {
+const shuffleArray = (cards: Card[]) => {
   // Iterate over the array
   for (let i = cards.length; i; i--) {
     // Get next index
@@ -91,6 +91,10 @@ function shuffleArray(cards: Card[]) {
     // Swap positions
     [cards[i - 1], cards[j]] = [cards[j], cards[i - 1]];
   }
+}
+
+const randomize = (len: number): number => {
+  return Math.floor(Math.random() * Math.floor(len));
 }
 export class Dealer {
   cards: Card[];
@@ -105,5 +109,29 @@ export class Dealer {
 
   getLength = (): number => {
     return this.cards.length;
+  }
+
+  resetCards = (): void => {
+    this.cards = cards;
+  }
+
+  numberIsValid = (count: number): boolean => {
+   if (count < 1 || count > 52) {
+     return false;
+   }
+   return true;
+  }
+
+  dealHand = (cardCount: number): Card[] => {
+    if (!this.numberIsValid(cardCount)) {
+      throw new Error('Bad number of cards. It must be between 1 and 9 or 52.');
+    }
+    const ret: Card[] = [];
+    shuffleArray(this.cards);
+    for (let i = 0; i < cardCount; i++) {
+      const card = this.cards[i];
+      ret.push(card);
+    }
+    return ret;
   }
 }
