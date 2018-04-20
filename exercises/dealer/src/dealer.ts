@@ -26,7 +26,7 @@
    Joker,
  }
 
- export type Card = [Suit, CardNumber];
+ type Card = [Suit, CardNumber];
 
 const cards: Card[] = [
   [Suit.Clubs, CardNumber.Ace],
