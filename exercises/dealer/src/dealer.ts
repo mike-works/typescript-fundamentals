@@ -58,7 +58,8 @@ export class Dealer {
   }
 
   readCard = (card: Card): string => {
-    return `${CardNumber[card[1]]} of ${Suit[card[0]]}`;
+    const [ suit, cardNumber ] = card;
+    return `${CardNumber[cardNumber]} of ${Suit[suit]}`;
   }
 
   getLength = (): number => {
@@ -88,7 +89,7 @@ export class Dealer {
 
   dealHand = (cardCount: number): Card[] => {
     if (!this.numberIsValid(cardCount)) {
-      throw new Error('Bad number of cards. It must be between 1 and 9 or 52.');
+      throw new Error('Bad number of cards. It must be between 1 and 52.');
     }
     const ret: Card[] = [];
     this.shuffleCards(this.cards);
