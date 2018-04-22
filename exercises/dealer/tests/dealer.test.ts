@@ -1,8 +1,7 @@
-import * as D from '../src/dealer';
-
-const { Dealer, Suit, CardNumber } = D as any;
+import { Dealer, Suit, CardNumber } from '../src/dealer';
 
 let exp = expect as jest.Expect;
+type Card = [Suit, CardNumber];
 
 if (Dealer) {
   test('Dealer is available as a named export from ./src/dealer.ts', () => {
@@ -54,12 +53,12 @@ if (Dealer) {
   test('dealer.dealHand(numCards) throws an error if you ask for too many cards', () => {
     let dealer = new Dealer();
     exp(() => {
-      dealer.dealHand(10);
-      dealer.dealHand(10);
-      dealer.dealHand(10);
-      dealer.dealHand(10);
-      dealer.dealHand(10);
-      dealer.dealHand(10);
+      dealer.dealHand(53);
+      dealer.dealHand(53);
+      dealer.dealHand(53);
+      dealer.dealHand(53);
+      dealer.dealHand(53);
+      dealer.dealHand(53);
     }).toThrow();
   });
 
@@ -75,7 +74,7 @@ if (Dealer) {
     let cards = dealer.dealHand(52);
     let numberCounts = new Array(13).fill(0, 0);
     let suitCounts = new Array(4).fill(0, 0);
-    cards.forEach(([suit, number]) => {
+    cards.forEach(([suit, number]: Card) => {
       numberCounts[number]++;
       suitCounts[suit]++;
     });
@@ -95,12 +94,24 @@ if (Dealer) {
   test('Cards are represented as [Suit(0-3), CardNumber(0-12)]', () => {
     let dealer = new Dealer();
     let cards = dealer.dealHand(52);
-    cards.forEach(([suit, num]) => {
+    cards.forEach(([suit, num]: Card) => {
       exp(suit).toBeLessThan(4);
       exp(suit).toBeGreaterThan(-1);
       exp(num).toBeLessThan(13);
       exp(num).toBeGreaterThan(-1);
     });
+  });
+
+  test('resetCards should unshuffle the deck', () => {
+    const dealer = new Dealer();
+    const origCards = dealer.cards;
+    dealer.shuffleCards(dealer.cards);
+    dealer.shuffleCards(dealer.cards);
+    dealer.shuffleCards(dealer.cards);
+    dealer.resetCards();
+   setTimeout(() => {
+     exp(dealer.cards).toEqual(origCards);
+   }, 3000);
   });
 } else {
   describe('Instructions', () => {
