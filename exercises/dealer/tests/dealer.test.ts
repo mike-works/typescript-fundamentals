@@ -109,7 +109,9 @@ if (Dealer) {
     dealer.shuffleCards(dealer.cards);
     dealer.shuffleCards(dealer.cards);
     dealer.resetCards();
-    exp(dealer.cards).toEqual(origCards);
+   setTimeout(() => {
+     exp(dealer.cards).toEqual(origCards);
+   }, 3000);
   });
 } else {
   describe('Instructions', () => {

@@ -1,3 +1,5 @@
+import { create } from "react-test-renderer";
+
 /**
  * Shuffle an array in place
  * @param cards Array to shuffle
@@ -26,71 +28,33 @@
    Joker,
  }
 
- type Card = [Suit, CardNumber];
-
-const cards: Card[] = [
-  [Suit.Clubs, CardNumber.Ace],
-  [Suit.Clubs, CardNumber.Two],
-  [Suit.Clubs, CardNumber.Three],
-  [Suit.Clubs, CardNumber.Four],
-  [Suit.Clubs, CardNumber.Five],
-  [Suit.Clubs, CardNumber.Six],
-  [Suit.Clubs, CardNumber.Seven],
-  [Suit.Clubs, CardNumber.Eight],
-  [Suit.Clubs, CardNumber.Nine],
-  [Suit.Clubs, CardNumber.Jack],
-  [Suit.Clubs, CardNumber.Queen],
-  [Suit.Clubs, CardNumber.King],
-  [Suit.Clubs, CardNumber.Joker],
-  [Suit.Diamonds, CardNumber.Ace],
-  [Suit.Diamonds, CardNumber.Two],
-  [Suit.Diamonds, CardNumber.Three],
-  [Suit.Diamonds, CardNumber.Four],
-  [Suit.Diamonds, CardNumber.Five],
-  [Suit.Diamonds, CardNumber.Six],
-  [Suit.Diamonds, CardNumber.Seven],
-  [Suit.Diamonds, CardNumber.Eight],
-  [Suit.Diamonds, CardNumber.Nine],
-  [Suit.Diamonds, CardNumber.Jack],
-  [Suit.Diamonds, CardNumber.Queen],
-  [Suit.Diamonds, CardNumber.King],
-  [Suit.Diamonds, CardNumber.Joker],
-  [Suit.Hearts, CardNumber.Ace],
-  [Suit.Hearts, CardNumber.Two],
-  [Suit.Hearts, CardNumber.Three],
-  [Suit.Hearts, CardNumber.Four],
-  [Suit.Hearts, CardNumber.Five],
-  [Suit.Hearts, CardNumber.Six],
-  [Suit.Hearts, CardNumber.Seven],
-  [Suit.Hearts, CardNumber.Eight],
-  [Suit.Hearts, CardNumber.Nine],
-  [Suit.Hearts, CardNumber.Jack],
-  [Suit.Hearts, CardNumber.Queen],
-  [Suit.Hearts, CardNumber.King],
-  [Suit.Hearts, CardNumber.Joker],
-  [Suit.Spades, CardNumber.Ace],
-  [Suit.Spades, CardNumber.Two],
-  [Suit.Spades, CardNumber.Three],
-  [Suit.Spades, CardNumber.Four],
-  [Suit.Spades, CardNumber.Five],
-  [Suit.Spades, CardNumber.Six],
-  [Suit.Spades, CardNumber.Seven],
-  [Suit.Spades, CardNumber.Eight],
-  [Suit.Spades, CardNumber.Nine],
-  [Suit.Spades, CardNumber.Jack],
-  [Suit.Spades, CardNumber.Queen],
-  [Suit.Spades, CardNumber.King],
-  [Suit.Spades, CardNumber.Joker],
-];
+type Card = [Suit, CardNumber];
 
 const randomize = (len: number): number => {
   return Math.floor(Math.random() * Math.floor(len));
+}
+
+const filteredKeys = (obj: object): string[] => {
+  return Object.keys(obj).filter((k) => {
+    return isNaN(parseInt(k ,10));
+  });
+}
+
+const createDeck = (): Card[] => {
+  const cards: Card[] = [];
+  for (let s = 0; s < filteredKeys(Suit).length; s++) {
+    for (let cn = 0; cn < filteredKeys(CardNumber).length; cn++) {
+      const card: Card = [s, cn];
+      cards.push(card);
+    }
+  }
+  return cards;
 }
 export class Dealer {
   cards: Card[];
 
   constructor() {
-    this.cards = cards;
+    this.cards = createDeck();
   }
 
   readCard = (card: Card): string => {
@@ -102,7 +66,7 @@ export class Dealer {
   }
 
   resetCards = (): void => {
-    this.cards = cards;
+    this.cards = createDeck();
   }
 
   numberIsValid = (count: number): boolean => {
