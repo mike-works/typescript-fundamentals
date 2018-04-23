@@ -4,6 +4,10 @@ export interface User {
   isActive: boolean,
 }
 
+export interface ConfirmedUser extends User {
+  isActive: true,
+}
+
 export interface Admin extends User {
   adminSince: Date,
 }
@@ -21,7 +25,7 @@ export class AccountManager {
   register(email: string, password: string): User | never {
     if(!email) throw 'Must provide an email';
     if(!password) throw 'Must provide a password';
-    let user: User = { email, password, isActive: false };
+    const user: User = { email, password, isActive: false };
     this.users.push(user);
     return user;
   }
@@ -32,10 +36,9 @@ export class AccountManager {
    * @param userToApprove Newly-registered user, who is to be activated
    * @return the updated user object, now activated
    */
-  activateNewUser(approver: Admin, userToApprove: User): User | never {
+  activateNewUser(approver: Admin, userToApprove: User): ConfirmedUser | never {
     if (!approver.adminSince) throw "Approver is not an admin!";
-    userToApprove.isActive = true;
-    return userToApprove;
+    return { ...userToApprove, isActive: true };
   }
 
   /**
