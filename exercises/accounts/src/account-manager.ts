@@ -22,7 +22,7 @@ export class AccountManager {
    * @return the new user account. An admin must activate it using activateNewUser
    * @see this.activateNewUser
    */
-  register(email: string, password: string): User | never {
+  register(email: string, password: string): User {
     if(!email) throw 'Must provide an email';
     if(!password) throw 'Must provide a password';
     const user: User = { email, password, isActive: false };
@@ -36,7 +36,7 @@ export class AccountManager {
    * @param userToApprove Newly-registered user, who is to be activated
    * @return the updated user object, now activated
    */
-  activateNewUser(approver: Admin, userToApprove: User): ConfirmedUser | never {
+  activateNewUser(approver: Admin, userToApprove: User): ConfirmedUser {
     if (!approver.adminSince) throw "Approver is not an admin!";
     return { ...userToApprove, isActive: true };
   }
@@ -47,7 +47,7 @@ export class AccountManager {
    * @param user an active user who you're making an admin
    * @return the updated user object, now can also be regarded as an admin
    */
-  promoteToAdmin(existingAdmin: Admin, user: User): Admin | never {
+  promoteToAdmin(existingAdmin: Admin, user: User): Admin {
     if (!existingAdmin.adminSince) throw "Not an admin!";
     if (user.isActive !== true) throw "User must be active in order to be promoted to admin!";
     return { ...user, adminSince: new Date()};
