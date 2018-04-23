@@ -8,11 +8,6 @@ export interface Admin extends User {
   adminSince: Date,
 }
 
-export interface AdminCandidate extends User {
-  adminSince: Date,
-  isActive: true,
-}
-
 export class AccountManager {
   users: User[] = [];
 
@@ -52,8 +47,6 @@ export class AccountManager {
   promoteToAdmin(existingAdmin: Admin, user: User): Admin | never {
     if (!existingAdmin.adminSince) throw "Not an admin!";
     if (user.isActive !== true) throw "User must be active in order to be promoted to admin!";
-    let userCandidate = user as AdminCandidate;
-    userCandidate.adminSince = new Date();
-    return userCandidate;
+    return { ...user, adminSince: new Date()};
   }
 }
