@@ -9,10 +9,11 @@ interface CartAPI {
   total: number,
   addItem: (obj: CartItem) => CartAPI,
   add: (name: string, price: number, qty?: number) => CartAPI,
+  reset: () => CartAPI,
 }
 
 export const cashier = (): CartAPI => {
-  const items: CartItem[] = [];
+  let items: CartItem[] = [];
   return {
     get length() {
       if (items.length > 0) {
@@ -47,6 +48,10 @@ export const cashier = (): CartAPI => {
         qty,
       };
       items.push(it);
+      return this;
+    },
+    reset() {
+      items = [];
       return this;
     },
   };
