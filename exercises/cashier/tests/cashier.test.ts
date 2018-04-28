@@ -96,6 +96,21 @@ if (cashier) {
       expect(tot).toBe(19.79);
     });
   });
+
+  describe('reset method returns the length and total to zero', () => {
+    const c = cashier() as any;
+    test('total is initially zero', () => {
+      expect(c.total).toBe(0);
+    });
+    test('length is initially zero', () => {
+      expect(c.length).toBe(0);
+    });
+    test('add a few items and hit reset method; total and length should be zero', () => {
+      c.addItem({ name: 'Grapes', price: 1.12, qty: 2 }).addItem({ name: 'Pears', price: 3.51, qty: 5 }).reset();
+      expect(c.total).toBe(0);
+      expect(c.length).toBe(0);
+    });
+  });
 } else {
   describe('Instructions', () => {
     test('Please uncomment the cashier function in cashier/src/cashier.ts', () => {
