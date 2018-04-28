@@ -7,8 +7,8 @@ interface CartItem {
 interface CartAPI {
   length: number,
   total: number,
-  addItem: (obj: CartItem) => void,
-  add: (name: string, price: number, qty?: number) => void,
+  addItem: (obj: CartItem) => CartAPI,
+  add: (name: string, price: number, qty?: number) => CartAPI,
 }
 
 export const cashier = (): CartAPI => {
@@ -38,6 +38,7 @@ export const cashier = (): CartAPI => {
     },
     addItem(obj) {
       items.push(obj);
+      return this;
     },
     add(name, price, qty = 1) {
       const it: CartItem = {
@@ -46,6 +47,7 @@ export const cashier = (): CartAPI => {
         qty,
       };
       items.push(it);
+      return this;
     },
   };
 }
