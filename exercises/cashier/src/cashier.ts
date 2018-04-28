@@ -14,7 +14,7 @@ interface CartAPI {
 export const cashier = (): CartAPI => {
   const items: CartItem[] = [];
   return {
-    get length(): number {
+    get length() {
       if (items.length > 0) {
         let total = 0;
         for (let i = 0; i < items.length; i++) {
@@ -25,7 +25,7 @@ export const cashier = (): CartAPI => {
       }
       return 0;
     },
-    get total(): number {
+    get total() {
       if (items.length > 0) {
         let total = 0;
         for (let i = 0; i < items.length; i++) {
