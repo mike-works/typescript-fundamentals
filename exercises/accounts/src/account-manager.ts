@@ -1,4 +1,9 @@
-export class AccountManager {
+interface User {
+  email: string;
+  password: string;
+}
+  
+  export class AccountManager {
   users = new Array();
 
   /**
@@ -8,7 +13,7 @@ export class AccountManager {
    * @return the new user account. An admin must activate it using activateNewUser
    * @see this.activateNewUser
    */
-  register(email, password) {
+  register(email: string, password: string): User {
     if(!email) throw 'Must provide an email';
     if(!password) throw 'Must provide a password';
     let user = { email, password };
