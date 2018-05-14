@@ -6,6 +6,10 @@ interface User {
 interface ConfirmedUser extends User {
   isActive: boolean;
 }
+
+interface AdminUser extends ConfirmedUser {
+  adminSince: Date;
+}
   
   export class AccountManager {
   users = new Array();
@@ -31,10 +35,11 @@ interface ConfirmedUser extends User {
    * @param userToApprove Newly-registered user, who is to be activated
    * @return the updated user object, now activated
    */
-  activateNewUser(approver: User, userToApprove: ConfirmedUser) {
+  activateNewUser(approver: AdminUser, userToApprove: User): ConfirmedUser {
     if (!approver.adminSince) throw "Approver is not an admin!";
-    userToApprove.isActive = true;
-    return userToApprove;
+    let toApprove = userToApprove as ConfirmedUser;
+    toApprove.isActive = true;
+    return toApprove;
   }
 
   /**
@@ -43,10 +48,11 @@ interface ConfirmedUser extends User {
    * @param user an active user who you're making an admin
    * @return the updated user object, now can also be regarded as an admin
    */
-  promoteToAdmin(existingAdmin, user) {
+  promoteToAdmin(existingAdmin: AdminUser, user: ConfirmedUser): AdminUser {
     if (!existingAdmin.adminSince) throw "Not an admin!";
     if (user.isActive !== true) throw "User must be active in order to be promoted to admin!";
-    user.adminSince = new Date();
-    return user;
+    let newAdmin = user as AdminUser;
+    newAdmin.adminSince = new Date();
+    return newAdmin;
   }
 }
