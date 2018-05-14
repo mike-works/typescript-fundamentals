@@ -2,6 +2,10 @@ interface User {
   email: string;
   password: string;
 }
+ 
+interface ConfirmedUser extends User {
+  isActive: boolean;
+}
   
   export class AccountManager {
   users = new Array();
@@ -27,7 +31,7 @@ interface User {
    * @param userToApprove Newly-registered user, who is to be activated
    * @return the updated user object, now activated
    */
-  activateNewUser(approver, userToApprove) {
+  activateNewUser(approver: User, userToApprove: ConfirmedUser) {
     if (!approver.adminSince) throw "Approver is not an admin!";
     userToApprove.isActive = true;
     return userToApprove;
