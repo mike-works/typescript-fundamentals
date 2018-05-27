@@ -24,7 +24,7 @@
     "@types/webpack-env": "^1.13.1",
     "awesome-typescript-loader": "^4.0.0",
     "babel-core": "^6.24.1",
-    "babel-jest": "^22.0.0",
+    "babel-jest": "^23.0.1",
     "babel-loader": "^7.0.0",
     "babel-plugin-react-transform": "^3.0.0",
     "babel-preset-env": "^1.4.0",
