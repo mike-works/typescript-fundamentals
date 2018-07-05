@@ -25,7 +25,7 @@
     "awesome-typescript-loader": "^4.0.0",
     "babel-core": "^6.24.1",
     "babel-jest": "^22.0.0",
-    "babel-loader": "^7.0.0",
+    "babel-loader": "7.1.4",
     "babel-plugin-react-transform": "^3.0.0",
     "babel-preset-env": "^1.4.0",
     "css-loader": "^0.28.0",
