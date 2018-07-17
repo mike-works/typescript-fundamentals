@@ -53,7 +53,7 @@
     "typescript": "^2.5.2",
     "webpack": "^3.0.0",
     "webpack-dev-middleware": "^2.0.0",
-    "webpack-hot-middleware": "^2.0.0"
+    "webpack-hot-middleware": "2.22.2"
   },
   "dependencies": {
     "chalk": "^2.3.0"
