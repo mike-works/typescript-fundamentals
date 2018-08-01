@@ -36,7 +36,7 @@
     "jest": "^22.0.0",
     "node-sass": "^4.5.2",
     "react": "^16.4.2",
-    "react-dom": "^16.0.0",
+    "react-dom": "^16.4.2",
     "react-test-render": "^1.1.1",
     "react-test-renderer": "^16.0.0",
     "react-transform-catch-errors": "^1.0.0",
