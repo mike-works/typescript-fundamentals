@@ -44,7 +44,7 @@
     "rimraf": "^2.4.3",
     "sass-loader": "^6.0.3",
     "scripty": "^1.7.2",
-    "style-loader": "^0.20.0",
+    "style-loader": "^0.22.1",
     "ts-node": "^5.0.0",
     "tslint": "^5.1.0",
     "tslint-loader": "^3.5.3",
