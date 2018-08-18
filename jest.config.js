@@ -4,6 +4,7 @@ module.exports = {
   transform: {
     "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
   },
+  testURL: "http://localhost",
   testMatch: ["**/tests/*.(ts|tsx|js|jsx)"],
   moduleDirectories: ["node_modules", "bower_components"]
 };
