@@ -9,17 +9,11 @@
   </a>
 </p>
 <p align='center'>
-  <a href="https://greenkeeper.io/" title="Dependencies">
-    <img title='GreenKeeper' src='https://badges.greenkeeper.io/mike-works/typescript-fundamentals.svg'>
-  </a>
   <a href="https://travis-ci.org/mike-works/typescript-fundamentals" title="Build Status">
     <img title="Build Status" src="https://travis-ci.org/mike-works/typescript-fundamentals.svg?branch=solutions"/>
   </a>
-  <a href="https://mike.works/course/typescript-fundamentals-7832c19" title="Typescript Fundamentals">
-    <img title="Course Outline" src="https://img.shields.io/badge/mike.works-course%20outline-blue.svg"/>
-  </a>
-  <a href="https://docs.mike.works/typescript-slides" title="Slides">
-    <img title="Slides" src="https://img.shields.io/badge/mike.works-slides-blue.svg"/>
+  <a href="https://github.com/mike-works/typescript-fundamentals/releases" title="Version">
+    <img title="Version" src="https://img.shields.io/github/tag/mike-works/typescript-fundamentals.svg" />
   </a>
 </p>
 <p align='center'>
