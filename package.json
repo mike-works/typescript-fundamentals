@@ -45,7 +45,7 @@
     "rimraf": "^2.4.3",
     "sass-loader": "^6.0.3",
     "scripty": "^1.7.2",
-    "style-loader": "^0.22.1",
+    "style-loader": "^0.23.0",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "tslint-microsoft-contrib": "^5.2.1",
