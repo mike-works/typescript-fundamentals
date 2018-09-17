@@ -54,7 +54,7 @@
     "typescript": "^3.0.3",
     "webpack": "^4.17.1",
     "webpack-dev-middleware": "^3.2.0",
-    "webpack-hot-middleware": "^2.23.1",
+    "webpack-hot-middleware": "^2.24.0",
     "semantic-release": "^15.9.11"
   },
   "dependencies": {
