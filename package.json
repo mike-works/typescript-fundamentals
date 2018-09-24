@@ -53,7 +53,7 @@
     "tsutils": "^3.0.0",
     "typescript": "^3.0.3",
     "webpack": "^4.19.0",
-    "webpack-dev-middleware": "^3.2.0",
+    "webpack-dev-middleware": "^3.3.0",
     "webpack-hot-middleware": "^2.24.0",
     "semantic-release": "^15.9.11"
   },
