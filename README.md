@@ -109,7 +109,7 @@ This will be an un-minified version of an exercise, and will include some webpac
 `npm run build:dev <exercise-name>`
 
 ##### Build Production Assets in the `/dist` folder
-This will be an an optimized version of the exercise
+This will be an optimized version of the exercise
 
 `npm run build:dist <exercise-name>`
 
