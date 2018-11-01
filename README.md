@@ -84,7 +84,7 @@ git clone https://github.com/mike-works/typescript-fundamentals tscript
 cd tscript
 ```
 
-Finally, while in the top-level folder of this project, download the and install this project's dependencies by running
+Finally, while in the top-level folder of this project, download and install this project's dependencies by running
 
 ```
 yarn
