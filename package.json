@@ -55,7 +55,7 @@
     "webpack": "^4.20.2",
     "webpack-dev-middleware": "^3.4.0",
     "webpack-hot-middleware": "^2.24.2",
-    "semantic-release": "^15.9.16"
+    "semantic-release": "^15.9.17"
   },
   "dependencies": {
     "chalk": "^2.4.1"
