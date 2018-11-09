@@ -251,10 +251,10 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/react@16.7.0":
-  version "16.7.0"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.7.0.tgz#d33202339d6fb672c2ad0930c835ecf8ae0ac521"
-  integrity sha512-bHwfht6kILzUj1Hs5vmr9vpokDmcNXPbR55tKE/ZEylb3WtSt9hAuO68rsm73/sre2/MwLijfo8sD4ANe+HDUg==
+"@types/react@16.7.1":
+  version "16.7.1"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.7.1.tgz#ae76b653d1d7d26b32186bba33c39745316bcdc4"
+  integrity sha512-kxde2oP2JvHiEXiAfb8WkL+8Aa9txDRD7L8zb3BipMNRoBbcr32xy/kfpbxmWMus71yXgJDqBgLmWil6UXdLzQ==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
