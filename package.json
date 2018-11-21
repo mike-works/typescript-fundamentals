@@ -46,7 +46,7 @@
     "rimraf": "2.6.2",
     "sass-loader": "7.1.0",
     "scripty": "1.8.0",
-    "semantic-release": "15.10.8",
+    "semantic-release": "15.12.1",
     "style-loader": "0.23.1",
     "ts-node": "7.0.1",
     "tslint": "5.11.0",
