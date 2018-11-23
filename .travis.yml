@@ -25,8 +25,6 @@ jobs:
       node_js: '10'
     - node_js: '8'
     - node_js: 'stable'
-    script:
-    - yarn test && yarn travis-deploy-once "yarn semantic-release"
 
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
@@ -37,7 +35,8 @@ install:
 before_script:
   - sudo chmod 4755 /opt/google/chrome/chrome-sandbox
   - sudo chown root /opt/google/chrome/chrome-sandbox
-
+script:
+  - yarn test && yarn travis-deploy-once "yarn semantic-release"
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
