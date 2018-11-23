@@ -12,7 +12,8 @@
     "test:ci": "scripty",
     "build:dev": "scripty",
     "build:dist": "scripty",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
@@ -50,8 +51,9 @@
     "rimraf": "2.6.2",
     "sass-loader": "7.1.0",
     "scripty": "1.8.0",
-    "semantic-release": "15.10.8",
+    "semantic-release": "^15.12.1",
     "style-loader": "0.23.1",
+    "travis-deploy-once": "^5.0.9",
     "ts-node": "7.0.1",
     "tslint": "5.11.0",
     "tslint-loader": "3.5.4",
