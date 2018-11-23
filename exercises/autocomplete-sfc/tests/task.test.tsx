@@ -7,7 +7,7 @@ import { ReactElement } from 'react';
 let hasStudentSolution: boolean = true;
 
 hasStudentSolution =
-  JSON.stringify(renderer.create(<PlaceSearchResult />).toTree()) !==
+  JSON.stringify(renderer.create(<PlaceSearchResult />).toJSON()) !==
   JSON.stringify({
     nodeType: 'component',
     props: {},
