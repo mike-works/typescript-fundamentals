@@ -9,7 +9,7 @@
   dependencies:
     "@babel/highlight" "^7.0.0"
 
-"@babel/core@^7.0.0", "@babel/core@^7.1.6":
+"@babel/core@7.1.6", "@babel/core@^7.0.0":
   version "7.1.6"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.1.6.tgz#3733cbee4317429bc87c62b29cf8587dba7baeb3"
   integrity sha512-Hz6PJT6e44iUNpAn8AoyAs6B3bl60g7MJQaI0rZEar6ECzh6+srYO1xlIdssio34mPaUtAb1y+XlkkSJzok3yw==
@@ -977,7 +977,7 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.5.6.tgz#9c03d3fed70a8d517c191b7734da2879b50ca26c"
   integrity sha512-ZBFR7TROLVzCkswA3Fmqq+IIJt62/T7aY/Dmz+QkU7CaW2QFqAitCE8Ups7IzmGhcN1YWMBT4Qcoc07jU9hOJQ==
 
-"@types/react-dom@^15.0.0":
+"@types/react-dom@15.5.8":
   version "15.5.8"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-15.5.8.tgz#e2fe3d95fc443c2dc2786eba99223f4e0eeeac22"
   integrity sha512-b/01pGMrAGcCfhAKx1y5/kmPoX2lCkDfuAcak/JWN2+Aev3UYcU+P3vqM3EiVeGKj4Lyfj8kyRaz7jF7mwbe4w==
@@ -992,7 +992,7 @@
     "@types/node" "*"
     "@types/react" "*"
 
-"@types/react-test-renderer@^15.0.0":
+"@types/react-test-renderer@15.5.7":
   version "15.5.7"
   resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-15.5.7.tgz#4f1d18a687021064b15fe3033004e42b584a84bd"
   integrity sha512-sCJhE4007+yS1uHvxVpbfSgxKGgLFulBuXHysolqAURB+7j+E9Ea41KspexaeaB82FVHgSJCUwKzTHnc7xzXaQ==
@@ -1007,7 +1007,7 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/react@^15", "@types/react@^15.0.0":
+"@types/react@15.6.20", "@types/react@^15":
   version "15.6.20"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-15.6.20.tgz#52f8e55cd86f37ff6274547debd7b623d0e2152b"
   integrity sha512-/lM+GhJsjgk16LN5Z8XDiHBFMWl2/BtYiAfqSfStsQwsjcWaC5Yxtziv6B8Wqpw8/82X+QG6z75GAiPdWZ4fKA==
@@ -4753,7 +4753,7 @@ humanize-ms@^1.2.1:
   dependencies:
     ms "^2.0.0"
 
-husky@^1.2.0:
+husky@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/husky/-/husky-1.2.0.tgz#d631dda1e4a9ee8ba69a10b0c51a0e2c66e711e5"
   integrity sha512-/ib3+iycykXC0tYIxsyqierikVa9DA2DrT32UEirqNEFVqOj1bFMTgP3jAz8HM7FgC/C8pc/BTUa9MV2GEkZaA==
@@ -8666,7 +8666,7 @@ scss-tokenizer@^0.2.3:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
 
-semantic-release@^15.12.1:
+semantic-release@15.12.1:
   version "15.12.1"
   resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-15.12.1.tgz#48939aaf8fd623769003f6bd76fdb974e24785b7"
   integrity sha512-HySTv+k3gKHM7/LWluz/2nZbDRI5zZpsOQ+GTVPLVepRMm5SdWzi4L+I7z5wBwN/JNSPHU7UF4CDSFeGYK1/Mg==
@@ -9476,7 +9476,7 @@ traverse@~0.6.6:
   resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.6.6.tgz#cbdf560fd7b9af632502fed40f918c157ea97137"
   integrity sha1-y99WD9e5r2MlAv7UD5GMFX6pcTc=
 
-travis-deploy-once@^5.0.9:
+travis-deploy-once@5.0.9:
   version "5.0.9"
   resolved "https://registry.yarnpkg.com/travis-deploy-once/-/travis-deploy-once-5.0.9.tgz#c5a2f639e17d8fd542f66d25ade126179d5e8acf"
   integrity sha512-cyHFErzq0HTEGY29RAq1clqFdt/IkCrlcOmyM1cGoGnEyukrrFi1fpy6JH3Mlf+88XsFwvluqKVWzj2bdz3k8A==
