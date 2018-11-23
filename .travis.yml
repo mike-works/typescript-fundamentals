@@ -16,6 +16,7 @@ jobs:
 
     - stage: 'CommitLint'
       name: 'Conventional Commits'
+      node_js: '10'
       script:
         - commitlint-travis
 
