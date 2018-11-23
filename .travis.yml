@@ -12,23 +12,35 @@ cache:
 sudo: required
 dist: trusty
 
+jobs:
+  fail_fast: true
+  include:
+    # runs linting and tests with current locked deps
+
+    - stage: 'CommitLint'
+      name: 'Conventional Commits'
+      script:
+        - commitlint-travis
+
+    # we recommend new addons test the current and previous LTS
+    # as well as latest stable release (bonus points to beta/canary)
+    - stage: 'Tests'
+      node_js: '10'
+
+      before_script:
+        - sudo chmod 4755 /opt/google/chrome/chrome-sandbox
+        - sudo chown root /opt/google/chrome/chrome-sandbox
+      script:
+        - yarn test:ci
+      after_success:
+        - yarn travis-deploy-once "yarn semantic-release"
+
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH=$HOME/.yarn/bin:$PATH
 
 install:
   - yarn install --no-lockfile --non-interactive
-
-script:
-  - commitlint-travis
-  - yarn test:ci
-
-before_script:
-  - sudo chmod 4755 /opt/google/chrome/chrome-sandbox
-  - sudo chown root /opt/google/chrome/chrome-sandbox
-
-after_success:
-  - yarn travis-deploy-once "yarn semantic-release"
 
 branches:
   except:
