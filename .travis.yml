@@ -1,7 +1,4 @@
 language: node_js
-node_js:
-  - '8'
-  - 'stable'
 
 addons:
   chrome: stable
@@ -26,13 +23,14 @@ jobs:
     # as well as latest stable release (bonus points to beta/canary)
     - stage: 'Tests'
       node_js: '10'
-
-      before_script:
+      - node_js: '8'
+      - node_js: 'stable'
+      - before_script:
         - sudo chmod 4755 /opt/google/chrome/chrome-sandbox
         - sudo chown root /opt/google/chrome/chrome-sandbox
-      script:
+      - script:
         - yarn test:ci
-      after_success:
+      - after_success:
         - yarn travis-deploy-once "yarn semantic-release"
 
 before_install:
