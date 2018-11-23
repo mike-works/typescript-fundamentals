@@ -37,7 +37,7 @@ before_script:
   - sudo chmod 4755 /opt/google/chrome/chrome-sandbox
   - sudo chown root /opt/google/chrome/chrome-sandbox
 script:
-  - yarn test && yarn travis-deploy-once "yarn semantic-release"
+  - yarn test:ci && yarn travis-deploy-once "yarn semantic-release"
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
