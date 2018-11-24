@@ -3,7 +3,7 @@
   "version": "0.0.0-development",
   "description": "Mike.Works typescript workshop",
   "main": "server.js",
-  "repository": "https://github.com/mike-works/typescript-workshop",
+  "repository": "https://github.com/mike-works/typescript-fundamentals",
   "author": "Mike North <michael.l.north@gmail.com> (https://mike.works)",
   "license": "BSD-3-Clause",
   "scripts": {
