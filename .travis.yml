@@ -16,15 +16,15 @@ jobs:
 
     - stage: 'CommitLint'
       name: 'Conventional Commits'
-      node_js: '10'
+      node_js: 10
       script:
         - commitlint-travis
 
     # we recommend new addons test the current and previous LTS
     # as well as latest stable release (bonus points to beta/canary)
     - stage: 'Tests'
-      node_js: '10'
-    - node_js: '8'
+      node_js: 10
+    - node_js: 8
     - node_js: 'stable'
 
 before_install:
