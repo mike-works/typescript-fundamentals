@@ -28,7 +28,7 @@
     "@types/react": "15.6.20",
     "@types/react-dom": "15.5.8",
     "@types/react-hot-loader": "4.1.0",
-    "@types/react-test-renderer": "15.5.7",
+    "@types/react-test-renderer": "16.0.3",
     "@types/webpack-env": "1.13.6",
     "awesome-typescript-loader": "5.2.1",
     "babel-core": "6.26.3",
