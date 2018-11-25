@@ -766,10 +766,10 @@
   resolved "https://registry.yarnpkg.com/@mike-works/js-lib-renovate-config/-/js-lib-renovate-config-2.0.0.tgz#eb9b1cb4b68e38ba4e59ae5ef853def84d329397"
   integrity sha512-hzw/xYMwE1jcKK+pAaqIo3brzzn5ktR73odlPn3SUJJ1MxSuoxlfgWpYrbxuvkwfuS8qVBhVlDJIibCot+Ad6A==
 
-"@mike-works/workshop-semantic-release-config@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@mike-works/workshop-semantic-release-config/-/workshop-semantic-release-config-1.0.0.tgz#7b4aeaec917a758428da98c3e838c0a5da64a97d"
-  integrity sha512-AVyv2KKDXp8NIFoLoZR6IcsDMCy+whpu5pmIpG5tfNqWTo7JNOuE2AsL8LeLxaMD9TxLe1CsLj1zYDxllnZi/w==
+"@mike-works/workshop-semantic-release-config@1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@mike-works/workshop-semantic-release-config/-/workshop-semantic-release-config-1.1.2.tgz#badc037fbbe47130cf8e1f8cdccb11a4748ba113"
+  integrity sha512-NnSugKstfvCCJJBmQ4WwzZjtC9ld9ymusqVMPNnI2BEVtKQRz1pm6flAG4FwMlp022R5AwIljSrWBRP2tfz1Wg==
   dependencies:
     "@semantic-release/changelog" "^3.0.0"
     "@semantic-release/error" "^2.2.0"
