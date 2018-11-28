@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/mike-works/typescript-fundamentals/compare/v1.0.0...v1.0.1) (2018-11-28)
+
+
+### Bug Fixes
+
+* encrypt github token in CI ([6299b3f](https://github.com/mike-works/typescript-fundamentals/commit/6299b3f))
+
 # 1.0.0 (2018-11-24)
 
 
