@@ -1007,7 +1007,12 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/react@15.6.20", "@types/react@^15":
+"@types/react@15.6.21":
+  version "15.6.21"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.6.21.tgz#86fb19df382be9becee360290948bb3f66808f90"
+  integrity sha512-XpKrM3ohs7pPOWpwPnaAoxbXMI5REcBTZm/c+WTLpfaAoDf99pnQAkTkg6DyPpnkmBbykhowaBd0sHP0+K7n0g==
+
+"@types/react@^15":
   version "15.6.20"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-15.6.20.tgz#52f8e55cd86f37ff6274547debd7b623d0e2152b"
   integrity sha512-/lM+GhJsjgk16LN5Z8XDiHBFMWl2/BtYiAfqSfStsQwsjcWaC5Yxtziv6B8Wqpw8/82X+QG6z75GAiPdWZ4fKA==
