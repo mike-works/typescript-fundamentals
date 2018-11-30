@@ -59,7 +59,7 @@
     "tslint-loader": "3.5.4",
     "tslint-microsoft-contrib": "5.2.1",
     "tsutils": "3.5.1",
-    "typescript": "3.1.6",
+    "typescript": "3.2.1",
     "webpack": "4.26.1",
     "webpack-dev-middleware": "3.4.0",
     "webpack-hot-middleware": "2.24.3"
