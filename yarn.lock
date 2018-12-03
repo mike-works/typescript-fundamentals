@@ -8729,10 +8729,10 @@ scss-tokenizer@^0.2.3:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
 
-semantic-release@15.12.1:
-  version "15.12.1"
-  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-15.12.1.tgz#48939aaf8fd623769003f6bd76fdb974e24785b7"
-  integrity sha512-HySTv+k3gKHM7/LWluz/2nZbDRI5zZpsOQ+GTVPLVepRMm5SdWzi4L+I7z5wBwN/JNSPHU7UF4CDSFeGYK1/Mg==
+semantic-release@15.12.4:
+  version "15.12.4"
+  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-15.12.4.tgz#d0f4c3649d01e2e29a9df5e4886bab869d75ef02"
+  integrity sha512-po30Te9E26v3Qb/G9pXFO6lCTFO07zvliqH00vmfuCoAjl1Wpg9SKb9dXVFM7BTdg5Fr/KqbdOsqHkT7kR4FeQ==
   dependencies:
     "@semantic-release/commit-analyzer" "^6.1.0"
     "@semantic-release/error" "^2.2.0"
