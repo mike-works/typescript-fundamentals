@@ -42,7 +42,7 @@
     "http-proxy-middleware": "0.19.1",
     "husky": "1.2.0",
     "jest": "23.6.0",
-    "node-sass": "4.10.0",
+    "node-sass": "4.11.0",
     "react": "15.6.2",
     "react-dom": "15.6.2",
     "react-test-renderer": "15.6.2",
