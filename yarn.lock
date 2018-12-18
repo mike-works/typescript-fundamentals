@@ -8751,10 +8751,10 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-scripty@1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/scripty/-/scripty-1.8.0.tgz#951f0b4bc3e235844b7f5355f58d31e012e0b806"
-  integrity sha512-KMbC6r/Afga4oWcdh5Rnr9eqsfvIPZqVnfrG9pxqwYUn4BJyBggzukagcHaDSbl1WHglAd2tVgGsoMpYtbbCMA==
+scripty@1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/scripty/-/scripty-1.9.0.tgz#41db74aa36ba31c92090eb189f9f642bde6d803d"
+  integrity sha512-aXSqeJHUhobpZ2bQkL06GAghZGUBVBzz+SSZMI4ngJ8tjBvW7e200bLdbR8Ql9EPftoUo+NHCb5r0ao/kpVy5w==
   dependencies:
     async "^2.6.1"
     glob "^7.0.3"

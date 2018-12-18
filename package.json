@@ -50,7 +50,7 @@
     "react-transform-hmr": "1.0.4",
     "rimraf": "2.6.2",
     "sass-loader": "7.1.0",
-    "scripty": "1.8.0",
+    "scripty": "1.9.0",
     "semantic-release": "15.13.1",
     "style-loader": "0.23.1",
     "travis-deploy-once": "5.0.11",
