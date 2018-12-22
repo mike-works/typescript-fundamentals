@@ -60,7 +60,7 @@
     "tslint-microsoft-contrib": "6.0.0",
     "tsutils": "3.5.2",
     "typescript": "3.2.1",
-    "webpack": "4.28.1",
+    "webpack": "4.28.2",
     "webpack-dev-middleware": "3.4.0",
     "webpack-hot-middleware": "2.24.3"
   },
