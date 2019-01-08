@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/mike-works/typescript-fundamentals/compare/v1.0.2...v1.0.3) (2019-01-08)
+
+
+### Bug Fixes
+
+* upgrade node-sass ([aeba7b5](https://github.com/mike-works/typescript-fundamentals/commit/aeba7b5)), closes [#184](https://github.com/mike-works/typescript-fundamentals/issues/184)
+
 ## [1.0.2](https://github.com/mike-works/typescript-fundamentals/compare/v1.0.1...v1.0.2) (2019-01-05)
 
 
