@@ -1086,10 +1086,10 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/react@15.6.21":
-  version "15.6.21"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.6.21.tgz#86fb19df382be9becee360290948bb3f66808f90"
-  integrity sha512-XpKrM3ohs7pPOWpwPnaAoxbXMI5REcBTZm/c+WTLpfaAoDf99pnQAkTkg6DyPpnkmBbykhowaBd0sHP0+K7n0g==
+"@types/react@15.6.22":
+  version "15.6.22"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.6.22.tgz#4adc49efc3bf503fa209281f4b94d0dfd8e4a90d"
+  integrity sha512-IF919L7jPY3XmTyN7VXd4wU4r2HZw7yziPPW9b/fYgZh/hZV0iw6t9SDmPt/T4IGwKA9tDKcoKpnTl4T+zq9iw==
 
 "@types/react@^15":
   version "15.6.20"
