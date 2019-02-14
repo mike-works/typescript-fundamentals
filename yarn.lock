@@ -1071,10 +1071,10 @@
     "@types/node" "*"
     "@types/react" "*"
 
-"@types/react-test-renderer@15.5.7":
-  version "15.5.7"
-  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-15.5.7.tgz#4f1d18a687021064b15fe3033004e42b584a84bd"
-  integrity sha512-sCJhE4007+yS1uHvxVpbfSgxKGgLFulBuXHysolqAURB+7j+E9Ea41KspexaeaB82FVHgSJCUwKzTHnc7xzXaQ==
+"@types/react-test-renderer@15.5.8":
+  version "15.5.8"
+  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-15.5.8.tgz#37580bf708ce450958f73515f52851c6fe2f5ec7"
+  integrity sha512-7amUz0jYdcyfnrphXXTFHL9PVvuE1yLG3y5tKhyrBlsUJFOHjVmk03W/WbZQFUiMicrurOQIiWVk9H/QCDHY3g==
   dependencies:
     "@types/react" "^15"
 
