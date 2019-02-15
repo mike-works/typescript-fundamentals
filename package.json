@@ -16,7 +16,7 @@
     "travis-deploy-once": "travis-deploy-once"
   },
   "devDependencies": {
-    "@babel/core": "7.2.2",
+    "@babel/core": "7.3.3",
     "@commitlint/cli": "7.5.1",
     "@commitlint/config-conventional": "7.5.0",
     "@commitlint/travis-cli": "7.5.1",
