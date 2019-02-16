@@ -1081,10 +1081,10 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.5.6.tgz#9c03d3fed70a8d517c191b7734da2879b50ca26c"
   integrity sha512-ZBFR7TROLVzCkswA3Fmqq+IIJt62/T7aY/Dmz+QkU7CaW2QFqAitCE8Ups7IzmGhcN1YWMBT4Qcoc07jU9hOJQ==
 
-"@types/react-dom@15.5.9":
-  version "15.5.9"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-15.5.9.tgz#35600490f48e2f28630c902f6fe9e8ca4b58c202"
-  integrity sha512-t1B38xIEH58DiDB5ovaSW6DZeEvoCz3ht9grnxCiPy7kCb4U3vASRCJVn3NCGPQ52wGJPdmOahOXartAPQAM1A==
+"@types/react-dom@15.5.10":
+  version "15.5.10"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-15.5.10.tgz#456894b829048a1d7a3ffbb06e81807a6e3a6129"
+  integrity sha512-N30VU1b4xJcWGEKeMvwxPWbQMlxEMj1tTK72771PtQuf0vz6P81wg5i152zqm865wZVYGIZymtYEY+XYTLL+YQ==
   dependencies:
     "@types/react" "^15"
 
