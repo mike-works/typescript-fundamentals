@@ -1,0 +1,35 @@
+{
+  "name": "@mike-works/typescript-fundamentals",
+  "version": "2.0.0",
+  "description": "Mike.Works typescript workshop",
+  "repository": "https://github.com/mike-works/typescript-fundamentals",
+  "author": "Mike North <michael.l.north@gmail.com> (https://mike.works)",
+  "private": true,
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.9.6",
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "@typescript-eslint/parser": "^1.4.2",
+    "chai": "^4.2.0",
+    "eslint": "^5.14.1",
+    "lerna": "^3.4.3",
+    "mocha": "^6.0.2",
+    "rimraf": "^2.6.3",
+    "source-map-support": "^0.5.10",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3333",
+    "dtslint": "^0.5.3"
+  },
+  "workspaces": [
+    "examples/*",
+    "challenges/*",
+    "notes"
+  ],
+  "scripts": {
+    "clean": "lerna run clean && lerna clean --yes && lerna bootstrap",
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "postinstall": "lerna link"
+  }
+}

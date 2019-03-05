@@ -1,0 +1,80 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "eslint.enable": true,
+    "eslint.validate": ["javascript", "typescript"],
+    "eslint.packageManager": "yarn",
+    "eslint.autoFixOnSave": true,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "yarn.lock": true
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/lib": true
+    },
+    "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "**/node_modules/**": true,
+      "**/examples/*/lib/**": true,
+      "**/challenges/*/lib/**": true
+    },
+    "better-comments.tags": [
+      {
+        "tag": "🚨",
+        "color": "#FF0000",
+        "strikethrough": false
+      },
+      {
+        "tag": "✅",
+        "color": "#00FF00",
+        "strikethrough": false
+      },
+      {
+        "tag": "💡",
+        "color": "#FFFF00",
+        "strikethrough": false
+      },
+      {
+        "tag": "‣",
+        "color": "#00FFFF",
+        "backgroundColor": "#333333",
+        "strikethrough": false
+      },
+      {
+        "tag": "(",
+        "color": "#FFFF00",
+        "strikethrough": false
+      },
+      {
+        "tag": "-",
+        "color": "#FFFF00",
+        "strikethrough": false
+      },
+      {
+        "tag": "==",
+        "backgroundColor": "#FFFFFF",
+        "color": "#000000",
+        "strikethrough": false
+      }
+    ],
+    "code-runner.executorMap": {
+      "javascript": "node",
+      "typescript": "node_modules/.bin/ts-node"
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "aaron-bond.better-comments",
+      "dbaeumer.vscode-eslint",
+      "formulahendry.code-runner"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true
+  },
+  "include": ["**/*.ts"]
+}

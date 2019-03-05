@@ -1,0 +1,7 @@
+{
+  "name": "ts-workshop-notes",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^3.3.3333"
+  }
+}
