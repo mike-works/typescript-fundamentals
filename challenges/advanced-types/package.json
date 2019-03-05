@@ -1,0 +1,21 @@
+{
+  "name": "advanced-type-challenges",
+  "version": "0.0.0",
+  "private": true,
+  "description": "> TODO: description",
+  "author": "Mike North <michael.l.north@gmail.com>",
+  "homepage": "",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "test": "dtslint test"
+  },
+  "devDependencies": {}
+}

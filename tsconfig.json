@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "strictNullChecks": true,
+    "strict": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": ["examples/*/src", "challenges/*/src", "notes"]
+}

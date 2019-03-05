@@ -1,0 +1,21 @@
+{
+  "name": "dict",
+  "version": "0.0.0",
+  "private": true,
+  "description": "> TODO: description",
+  "author": "Mike North <michael.l.north@gmail.com>",
+  "homepage": "",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "tsc src/index.ts --outDir lib --types node --module commonjs --target ES2017",
+    "test": "mocha"
+  },
+  "devDependencies": {}
+}
