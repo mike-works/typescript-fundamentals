@@ -23,7 +23,7 @@ This is the example project used for the <a title="Mike.Works" href="https://mik
 # Course outline and slides
 
 - [View course outline here](https://mike.works/course/typescript-fundamentals-7832c19)
-- [View slides here](https://docs.mike.works/typescript-slides)
+- [View slides here](https://docs.mike.works/typescript-slides-v2)
 
 ## Dependencies
 
