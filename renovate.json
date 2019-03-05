@@ -1,4 +1,0 @@
-{
-  "extends": ["@mike-works/js-lib-renovate-config"],
-  "baseBranches": ["master", "v2"]
-}
