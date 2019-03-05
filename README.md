@@ -37,7 +37,7 @@ Make sure your system is set up with
 First, clone this project from Github
 
 ```
-git clone https://github.com/mike-works/typescript-fundamentals tscript
+git clone https://github.com/mike-works/typescript-fundamentals -b v2 tscript
 cd tscript
 ```
 
