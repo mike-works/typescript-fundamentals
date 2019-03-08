@@ -1,3 +1,16 @@
+<table align="center">
+  <tr>
+    <td align="center">
+      ⚠️ <strong>A NOTE ABOUT VERSIONS</strong> ️️️⚠️
+    </td>
+  </tr>
+  <tr>
+    <td>
+      This branch is for the 2.x version of this workshop released in 2019 (for TypeScript 3.x). If you're looking for the 1.x version, released in 2017, <a href="https://github.com/mike-works/typescript-fundamentals/tree/v1">click here</a>
+    </td>
+  </tr>
+</table>
+
 <p align='center'>
   <a href="https://mike.works" target='_blank'>
     <img height=40 src='https://assets.mike.works/img/login_logo-33a9e523d451fb0d902f73d5452d4a0b.png' />
