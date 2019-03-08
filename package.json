@@ -1,6 +1,6 @@
 {
   "name": "@mike-works/typescript-fundamentals",
-  "version": "0.0.0-development",
+  "version": "1.0.3",
   "description": "Mike.Works typescript workshop",
   "main": "server.js",
   "repository": "https://github.com/mike-works/typescript-fundamentals",
