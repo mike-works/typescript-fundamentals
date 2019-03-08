@@ -7,14 +7,14 @@ import { HasPhoneNumber, HasEmail } from "./1-basics";
  * -   They can "implement" interfaces
  */
 
-// export class Contact implements HasEmail {
-//   email: string;
-//   name: string;
-//   constructor(name: string, email: string) {
-//     this.email = email;
-//     this.name = name;
-//   }
-// }
+export class Contact implements HasEmail {
+  email: string;
+  name: string;
+  constructor(name: string, email: string) {
+    this.email = email;
+    this.name = name;
+  }
+}
 
 /**
  * (2) This looks a little verbose -- we have to specify the words "name" and "email" 3x.
@@ -29,52 +29,63 @@ import { HasPhoneNumber, HasEmail } from "./1-basics";
  * - private - only me
  */
 
-// class ParamPropContact implements HasEmail {
-//   constructor(public name: string, public email: string = "no email") {
-//     // nothing needed
-//   }
-// }
+class ParamPropContact implements HasEmail {
+  constructor(public name: string, public email: string = "no email") {
+    // nothing needed
+  }
+}
+const x = new ParamPropContact("a", "b");
 
 /**
  * (4) Class fields can have initializers (defaults)
  */
-// class OtherContact implements HasEmail, HasPhoneNumber {
-//   protected age: number = 0;
-//   // private password: string;
-//   constructor(public name: string, public email: string, public phone: number) {
-//     // () password must either be initialized like this, or have a default value
-//     // this.password = Math.round(Math.random() * 1e14).toString(32);
-//   }
-// }
+class OtherContact implements HasEmail, HasPhoneNumber {
+  protected age = 0;
+  private passwordVal: string | undefined;
+  constructor(public name: string, public email: string, public phone: number) {
+    this.age = 35;
+    // () password must either be initialized like this, or have a default value
+  }
+  get password(): string {
+    if (!this.passwordVal) {
+      this.passwordVal = Math.round(Math.random() * 1e14).toString(32);
+    }
+    return this.passwordVal;
+  }
+  async init() {
+    this.password;
+    // this.password = Math.round(Math.random() * 1e14).toString(32);
+  }
+}
 
 /**
  * (5) TypeScript even allows for abstract classes, which have a partial implementation
  */
 
-// abstract class AbstractContact implements HasEmail, HasPhoneNumber {
-//   public abstract phone: number; // must be implemented by non-abstract subclasses
+abstract class AbstractContact implements HasEmail, HasPhoneNumber {
+  public abstract phone: number; // must be implemented by non-abstract subclasses
 
-//   constructor(
-//     public name: string,
-//     public email: string // must be public to satisfy HasEmail
-//   ) {}
+  constructor(
+    public name: string,
+    public email: string // must be public to satisfy HasEmail
+  ) {}
 
-//   abstract sendEmail(): void; // must be implemented by non-abstract subclasses
-// }
+  abstract sendEmail(): void; // must be implemented by non-abstract subclasses
+}
 
 /**
  * (6) implementors must "fill in" any abstract methods or properties
  */
-// class ConcreteContact extends AbstractContact {
-//   constructor(
-//     public phone: number, // must happen before non property-parameter arguments
-//     name: string,
-//     email: string
-//   ) {
-//     super(name, email);
-//   }
-//   sendEmail() {
-//     // mandatory!
-//     console.log("sending an email");
-//   }
-// }
+class ConcreteContact extends AbstractContact {
+  constructor(
+    public phone: number, // must happen before non property-parameter arguments
+    name: string,
+    email: string
+  ) {
+    super(name, email);
+  }
+  sendEmail() {
+    // mandatory!
+    console.log("sending an email");
+  }
+}
