@@ -23,6 +23,7 @@
     "lerna": "3.13.1",
     "mocha": "6.0.2",
     "rimraf": "2.6.3",
+    "semantic-release": "^15.13.3",
     "source-map-support": "0.5.10",
     "ts-node": "8.0.3",
     "typescript": "3.3.3333"
@@ -36,7 +37,8 @@
     "clean": "lerna run clean && lerna clean --yes && lerna bootstrap",
     "build": "lerna run build",
     "test": "lerna run test",
-    "postinstall": "lerna link"
+    "postinstall": "lerna link",
+    "semantic-release": "semantic-release"
   },
   "release": {
     "extends": "@mike-works/workshop-semantic-release-config"
