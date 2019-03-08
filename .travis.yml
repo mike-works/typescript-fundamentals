@@ -1,35 +1,40 @@
 language: node_js
-addons:
-  chrome: stable
+node_js: 10
+
 cache:
   yarn: true
 sudo: required
 dist: trusty
+
+stages:
+  - Tests
+  - name: Release
+    if: type = push and (branch = v2 or branch = master)
+
 jobs:
   fail_fast: true
   include:
-  - stage: CommitLint
-    name: Conventional Commits
-    node_js: 10
-    script:
-    - commitlint-travis
-  - stage: Tests
-    node_js: 10
-  - node_js: 8
-  - node_js: stable
+    - stage: Tests
+      name: Conventional Commits
+      node_js: 10
+      script:
+        - commitlint-travis
+    - name: Fixed Dependencies
+    - name: Floating Dependencies
+      install: yarn install --no-lockfile --non-interactive
+    - node_js: 8
+    - node_js: stable
+
+    - stage: Release
+      name: Github Release
+      script: yarn semantic-release
+
 before_install:
-- curl -o- -L https://yarnpkg.com/install.sh | bash
-- export PATH=$HOME/.yarn/bin:$PATH
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH=$HOME/.yarn/bin:$PATH
+
 install:
-- yarn install --no-lockfile --non-interactive
-before_script:
-- sudo chmod 4755 /opt/google/chrome/chrome-sandbox
-- sudo chown root /opt/google/chrome/chrome-sandbox
+  - yarn install --non-interactive
+
 script:
-- yarn test:ci && yarn travis-deploy-once "yarn semantic-release"
-branches:
-  except:
-  - "/^v\\d+\\.\\d+\\.\\d+$/"
-env:
-  global:
-    secure: 15Q6i0W/+YqcQ8+l0rVZuPhNdOcO6GPSewKrzVT1LzkEtrtoDRgqUaTleE9eHN1P/7KBxqKUQIyrvnsJiolUuin8a9xoJjLGW0e90W0OE9SElQ3HlhawimSM1VxJPYz+laUYJ2GAfMFPQg7WvQ9v/mQmEwZAnf5qZV76FtZc+XmfDySN25l+7nE/vJ3QWkcx6ey1OHfgZR0c2pjiPd2krNfTpgg3gK/KOUtcxpYdCK/gTzp9DOHzyxKxbK5bxA72iw7Wz2b27NVg5ENRVaShDuT6hzg+JCwNlpLisMEBCCjkgrAnKHSho/AuA2bJaVGeBLMZwpl1S02vbetOSWsxy0qoA26sYHJshcq4No9wE34L5yaGlgzHuEYQzX+P8frBlkKwk3PwhlR9K+L7f0D+6pN/EbHLo/OplTkxjbnRtuOEkGnaS5oyc5EnIczZsLClC1OafolnUi7mjfpdX2TqDh/dQLs+RtoV3aU2cn18fVqwrhBGkFFDuKuekasyhup2TCel8EacLpYAzf0iQukA6gGm8bI2ubgBunTBl2/G7rFYmHfdTF8+JLcNqTeBLMYkCfSFs6M65IAbsx0PYDmtUocCGGiYPkYHofTq3FOaV530MPWahE82e8qHWNssK5dxizh28jyYUrP1IrUQLVikxp4404NcSX9D2x5bNSrp20A=
+  - yarn test:ci
