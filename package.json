@@ -41,7 +41,8 @@
     "semantic-release": "semantic-release"
   },
   "release": {
-    "extends": "@mike-works/workshop-semantic-release-config"
+    "extends": "@mike-works/workshop-semantic-release-config",
+    "branch": "v2"
   },
   "commitlint": {
     "extends": [
