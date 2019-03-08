@@ -37,4 +37,4 @@ install:
   - yarn install --non-interactive
 
 script:
-  - echo "no tests"
+  - lerna run test --scope=hello-ts
