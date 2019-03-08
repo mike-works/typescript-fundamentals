@@ -6,6 +6,11 @@
   "author": "Mike North <michael.l.north@gmail.com> (https://mike.works)",
   "private": true,
   "devDependencies": {
+    "@commitlint/cli": "7.5.2",
+    "@commitlint/config-conventional": "7.5.0",
+    "@commitlint/travis-cli": "7.5.2",
+    "@mike-works/js-lib-renovate-config": "^2.0.0",
+    "@mike-works/workshop-semantic-release-config": "^1.0.0",
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.9.6",
@@ -32,5 +37,18 @@
     "build": "lerna run build",
     "test": "lerna run test",
     "postinstall": "lerna link"
+  },
+  "release": {
+    "extends": "@mike-works/workshop-semantic-release-config"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "./node_modules/.bin/commitlint -e $HUSKY_GIT_PARAMS"
+    }
   }
 }
