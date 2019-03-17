@@ -46,9 +46,10 @@ interface Foo {
   x: string;
   y: number;
 }
-export type ExtractPropertyNamesAssignableTo<T, S> = {
-  [K in keyof T]: Record<K, S> extends Pick<T, K> ? K : never
-}[keyof T];
+export type ExtractPropertyNamesAssignableTo<T, S> = Exclude<
+  { [K in keyof T]: Record<K, S> extends Pick<T, K> ? K : never }[keyof T],
+  undefined
+>;
 
 type X = ExtractPropertyNamesAssignableTo<
   Window,
@@ -67,9 +68,10 @@ type X = ExtractPropertyNamesAssignableTo<
  * 'b'
  *
  */
-export type OptionalPropertyNamesOf<T> = {
-  [K in keyof T]: T extends Record<K, T[K]> ? never : K
-}[keyof T];
+export type OptionalPropertyNamesOf<T> = Exclude<
+  { [K in keyof T]: T extends Record<K, T[K]> ? never : K }[keyof T],
+  undefined
+>;
 
 /**
  * - RequiredPropertyNamesOf: Extract the property names of an object type that are required
@@ -82,6 +84,7 @@ export type OptionalPropertyNamesOf<T> = {
  * // results in
  * 'a'
  */
-export type RequiredPropertyNamesOf<T> = {
-  [K in keyof T]: T extends Record<K, T[K]> ? K : never
-}[keyof T];
+export type RequiredPropertyNamesOf<T> = Exclude<
+  { [K in keyof T]: T extends Record<K, T[K]> ? K : never }[keyof T],
+  undefined
+>;
