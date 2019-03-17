@@ -42,6 +42,7 @@ This is the example project used for the <a title="Mike.Works" href="https://mik
 
 Make sure your system is set up with
 
+- [TypeScript](https://www.typescriptlang.org/#download-links)
 - [Yarn](https://yarnpkg.com/en/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
