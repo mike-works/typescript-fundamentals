@@ -13,7 +13,7 @@ export interface JSONObject {
 }
 export interface JSONArray extends Array<JSONValue> {}
 
-const arr2: JSONValue = ["", 1, () => false];
+// const arr2: JSONValue = ["", 1, () => false];
 
 const str: JSONValue = "hello";
 const num: JSONValue = 5;
@@ -26,6 +26,6 @@ const obj: JSONValue = {
   a: "a"
 };
 
-const badobj: JSONValue = {
-  a() {}
-};
+// const badobj: JSONValue = {
+//   a() {}
+// };
