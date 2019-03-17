@@ -17,5 +17,7 @@
     "build": "tsc",
     "test": "dtslint test"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/node": "^11.11.3"
+  }
 }
