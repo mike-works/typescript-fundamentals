@@ -1,3 +1,11 @@
+## [2.0.1](https://github.com/mike-works/typescript-fundamentals/compare/v2.0.0...v2.0.1) (2019-03-18)
+
+
+### Bug Fixes
+
+* relax Dict<T> tests to sync with video ([1cd1f07](https://github.com/mike-works/typescript-fundamentals/commit/1cd1f07))
+* sync tests to match FEM video ([327f9aa](https://github.com/mike-works/typescript-fundamentals/commit/327f9aa))
+
 # [2.0.0](https://github.com/mike-works/typescript-fundamentals/compare/v1.0.3...v2.0.0) (2019-03-08)
 
 ### Bug Fixes
