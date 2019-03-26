@@ -2333,10 +2333,10 @@ dts-critic@^1.0.4:
     download-file-sync "^1.0.4"
     yargs "^12.0.5"
 
-dtslint@0.5.7:
-  version "0.5.7"
-  resolved "https://registry.yarnpkg.com/dtslint/-/dtslint-0.5.7.tgz#5aa11479b94cb9a9f4a170f308732d9d559ec595"
-  integrity sha512-JLgONRkTNxp568/xbtEBnv4zEAluGWAq2hEFOYK6BzGXCy9aF89cbsv5VCFD4omN1JYuzPIQTUBOM9VjtGcgEQ==
+dtslint@0.5.8:
+  version "0.5.8"
+  resolved "https://registry.yarnpkg.com/dtslint/-/dtslint-0.5.8.tgz#acae2c66ef84baa9f24479618c9c750db290b8ac"
+  integrity sha512-Cj181xOKecrUjRpEv6B5GUCaG/wnt43huWFJ7Q4PGe8ZyynQZRGXnavwINK5HDWgv+CZA6t0jBxKmTQrepTCtg==
   dependencies:
     definitelytyped-header-parser "^1.0.1"
     dts-critic "^1.0.4"
