@@ -1,8 +1,6 @@
-node_modules
+**/node_modules
+**/out
+**/lib
 .vscode
-dist
-typings
-npm-debug*
-yarn-error*
-tocopy*
-apikeys.js
+lerna-debug.log
+**/tempCodeRunnerFile.ts

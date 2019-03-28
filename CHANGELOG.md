@@ -1,42 +1,17 @@
-## [1.0.3](https://github.com/mike-works/typescript-fundamentals/compare/v1.0.2...v1.0.3) (2019-01-08)
-
-
-### Bug Fixes
-
-* upgrade node-sass ([aeba7b5](https://github.com/mike-works/typescript-fundamentals/commit/aeba7b5)), closes [#184](https://github.com/mike-works/typescript-fundamentals/issues/184)
-
-## [1.0.2](https://github.com/mike-works/typescript-fundamentals/compare/v1.0.1...v1.0.2) (2019-01-05)
-
+# [2.0.0](https://github.com/mike-works/typescript-fundamentals/compare/v1.0.3...v2.0.0) (2019-03-08)
 
 ### Bug Fixes
 
-* **deps:** update dependency chalk to v2.4.2 ([5ea229b](https://github.com/mike-works/typescript-fundamentals/commit/5ea229b))
+- align sequence of notes with order of slides ([313d994](https://github.com/mike-works/typescript-fundamentals/commit/313d994))
+- move "interfaces vs types" back to the appropriate section" ([ba80c45](https://github.com/mike-works/typescript-fundamentals/commit/ba80c45))
+- rename workspace ([646951a](https://github.com/mike-works/typescript-fundamentals/commit/646951a))
+- rename workspace ([8ce8966](https://github.com/mike-works/typescript-fundamentals/commit/8ce8966))
+- tests should fail in starting point code ([cfece55](https://github.com/mike-works/typescript-fundamentals/commit/cfece55))
+- tests should fail in starting point code ([454ce39](https://github.com/mike-works/typescript-fundamentals/commit/454ce39))
+- update installation instructions ([1706f7f](https://github.com/mike-works/typescript-fundamentals/commit/1706f7f))
+- update slides link ([10ca9c2](https://github.com/mike-works/typescript-fundamentals/commit/10ca9c2))
 
-## [1.0.1](https://github.com/mike-works/typescript-fundamentals/compare/v1.0.0...v1.0.1) (2018-11-28)
+### Features
 
-
-### Bug Fixes
-
-* encrypt github token in CI ([6299b3f](https://github.com/mike-works/typescript-fundamentals/commit/6299b3f))
-
-# 1.0.0 (2018-11-24)
-
-
-### Bug Fixes
-
-* add missing dependency ([310ef22](https://github.com/mike-works/typescript-fundamentals/commit/310ef22))
-* bump ([270e15a](https://github.com/mike-works/typescript-fundamentals/commit/270e15a))
-* correct repo link in package.json ([4a67ea1](https://github.com/mike-works/typescript-fundamentals/commit/4a67ea1))
-* replace apikeys.js.default ([796ace9](https://github.com/mike-works/typescript-fundamentals/commit/796ace9))
-* semantic-release ([2b53c76](https://github.com/mike-works/typescript-fundamentals/commit/2b53c76))
-* shared renovate config ([25af710](https://github.com/mike-works/typescript-fundamentals/commit/25af710))
-* update babel config ([09494d6](https://github.com/mike-works/typescript-fundamentals/commit/09494d6))
-* update lockfile ([cad0414](https://github.com/mike-works/typescript-fundamentals/commit/cad0414))
-* update Travis-CI config ([1925c8e](https://github.com/mike-works/typescript-fundamentals/commit/1925c8e))
-* upgrade react to ^15 ([4bf00e3](https://github.com/mike-works/typescript-fundamentals/commit/4bf00e3))
-* webpack4 compatibility ([c6c6f3e](https://github.com/mike-works/typescript-fundamentals/commit/c6c6f3e))
-
-
-### BREAKING CHANGES
-
-* 1.0
+- clean slate ([514d236](https://github.com/mike-works/typescript-fundamentals/commit/514d236))
+- v2 of workshop ([27f7df3](https://github.com/mike-works/typescript-fundamentals/commit/27f7df3))

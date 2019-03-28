@@ -9,7 +9,7 @@ dist: trusty
 stages:
   - Tests
   - name: Release
-    if: type = push and (branch = v2 or branch = master)
+    if: branch = v2 and type = push
 
 jobs:
   fail_fast: true
@@ -37,4 +37,4 @@ install:
   - yarn install --non-interactive
 
 script:
-  - yarn test:ci
+  - lerna run test --scope=hello-ts
