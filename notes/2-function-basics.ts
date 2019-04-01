@@ -32,7 +32,7 @@ import { HasEmail, HasPhoneNumber } from "./1-basics";
 //       parts.length === 2
 //         ? undefined
 //         : // everything except first and last
-//           parts.slice(1, parts.length - 2).join(" "),
+//           parts.slice(1, parts.length - 1).join(" "),
 //     last: parts[parts.length - 1]
 //   };
 // }
