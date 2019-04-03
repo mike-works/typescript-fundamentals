@@ -61,7 +61,7 @@
     "tsutils": "3.10.0",
     "typescript": "3.3.4000",
     "webpack": "4.29.6",
-    "webpack-dev-middleware": "3.6.1",
+    "webpack-dev-middleware": "3.6.2",
     "webpack-hot-middleware": "2.24.3"
   },
   "dependencies": {
