@@ -2344,22 +2344,22 @@ download-file-sync@^1.0.4:
   resolved "https://registry.yarnpkg.com/download-file-sync/-/download-file-sync-1.0.4.tgz#d3e3c543f836f41039455b9034c72e355b036019"
   integrity sha1-0+PFQ/g29BA5RVuQNMcuNVsDYBk=
 
-dts-critic@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/dts-critic/-/dts-critic-1.0.6.tgz#42ba0a85ff6544d3b65ec58cfae86d53be6203ed"
-  integrity sha512-4ELGB//kunDK88U1aYurzdnNlm9hbUI6VHlgQe39TzvzfeUSxQ634Rbm4qJvtGIW6hmqDnxw4D4+QAMQMd7nQw==
+dts-critic@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/dts-critic/-/dts-critic-1.0.8.tgz#a94f8542cec6f26740861381546721aa2ceae13f"
+  integrity sha512-Im7be8/puxpnMaQMW76DAr3lGtAOyyTWlF0MxJ3MtAIAHSqa2Ux6ywGoiqdOzNZO3uSwlfy+DyKz4QCauVjzkA==
   dependencies:
     definitelytyped-header-parser "^1.0.1"
     download-file-sync "^1.0.4"
     yargs "^12.0.5"
 
-dtslint@0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/dtslint/-/dtslint-0.7.0.tgz#30f11d4efba257730a34159ada87750090ca0468"
-  integrity sha512-7swnnfKnkjW8Vidvn0rP9wNCnzANuCj3V2ZFhYjwejGDzpuKtcuINPGWmeBIn1rsIaU6cBsZcleE9lHhX8Phqg==
+dtslint@0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/dtslint/-/dtslint-0.7.2.tgz#1fe892853f200278c8beadb55871e898a4783934"
+  integrity sha512-41MzsjaGzQDqEYDJx5MyGrUq+JAj4ymsBFzZkOYST+rSXw8hAMCE+77lOz7Cc3PEg5Sj1e7Dg/cgNB2MBT7wMw==
   dependencies:
     definitelytyped-header-parser "^1.0.1"
-    dts-critic "^1.0.6"
+    dts-critic "^1.0.8"
     fs-extra "^6.0.1"
     request "^2.88.0"
     strip-json-comments "^2.0.1"
