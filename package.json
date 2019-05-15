@@ -62,7 +62,7 @@
     "typescript": "3.3.4000",
     "webpack": "4.31.0",
     "webpack-dev-middleware": "3.7.0",
-    "webpack-hot-middleware": "2.24.4"
+    "webpack-hot-middleware": "2.25.0"
   },
   "dependencies": {
     "chalk": "2.4.2"
