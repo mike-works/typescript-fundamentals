@@ -41,17 +41,19 @@ This is the example project used for the <a title="Mike.Works" href="https://mik
 ## Dependencies
 
 Make sure your system is set up with
-
+- *Node.js* - using [Volta](http://volta.sh) makes setup extremely easy!
 - [Yarn](https://yarnpkg.com/en/)
 - [Visual Studio Code](https://code.visualstudio.com/)
+- [TypeScript](https://www.typescriptlang.org/index.html#download-links) (should be globally installed)
+- [ESLint](https://eslint.org/docs/user-guide/getting-started#installation-and-usage) (should be globally installed)
 
 ## Project setup
 
 First, clone this project from Github
 
 ```
-git clone https://github.com/mike-works/typescript-fundamentals -b v2 tscript
-cd tscript
+git clone https://github.com/mike-works/typescript-fundamentals
+cd typescript-fundamentals
 ```
 
 Finally, while in the top-level folder of this project, download and install this project's dependencies by running
