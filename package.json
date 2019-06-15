@@ -54,7 +54,7 @@
     "semantic-release": "15.13.16",
     "style-loader": "0.23.1",
     "travis-deploy-once": "5.0.11",
-    "ts-node": "8.2.0",
+    "ts-node": "8.3.0",
     "tslint": "5.13.1",
     "tslint-loader": "3.5.4",
     "tslint-microsoft-contrib": "6.2.0",
