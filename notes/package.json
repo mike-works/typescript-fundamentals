@@ -2,6 +2,6 @@
   "name": "ts-workshop-notes",
   "private": true,
   "devDependencies": {
-    "typescript": "3.5.2"
+    "typescript": "3.5.3"
   }
 }
