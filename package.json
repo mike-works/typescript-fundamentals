@@ -29,7 +29,7 @@
     "@types/react-dom": "16.8.4",
     "@types/react-hot-loader": "4.1.0",
     "@types/react-test-renderer": "16.8.2",
-    "@types/webpack-env": "1.13.9",
+    "@types/webpack-env": "1.14.0",
     "awesome-typescript-loader": "5.2.1",
     "babel-core": "6.26.3",
     "babel-jest": "24.8.0",
