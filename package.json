@@ -17,9 +17,9 @@
   },
   "devDependencies": {
     "@babel/core": "7.5.4",
-    "@commitlint/cli": "8.0.0",
-    "@commitlint/config-conventional": "8.0.0",
-    "@commitlint/travis-cli": "8.0.0",
+    "@commitlint/cli": "8.1.0",
+    "@commitlint/config-conventional": "8.1.0",
+    "@commitlint/travis-cli": "8.1.0",
     "@mike-works/js-lib-renovate-config": "2.0.0",
     "@mike-works/workshop-semantic-release-config": "1.1.2",
     "@types/chalk": "2.2.0",
