@@ -6,23 +6,23 @@ import { HasEmail } from "./1-basics";
  * (1) "Top types" are types that can hold any value. Typescript has two of them
  */
 
-// let myAny: any = 32;
-// let myUnknown: unknown = "hello, unknown";
+let myAny: any = 32;
+let myUnknown: unknown = "hello, unknown";
 
 // Note that we can do whatever we want with an any, but nothing with an unknown
 
-// myAny.foo.bar.baz;
-// myUnknown.foo;
+myAny.foo.bar.baz;
+myUnknown.foo;
 
 /**
  * (2) When to use `any`
  * Anys are good for areas of our programs where we want maximum flexibility
  * Example: sometimes a Promise<any> is fine when we don't care at all about the resolved value
  */
-// async function logWhenResolved(p: Promise<any>) {
-//   const val = await p;
-//   console.log("Resolved to: ", val);
-// }
+async function logWhenResolved(p: Promise<any>) {
+  const val = await p;
+  console.log("Resolved to: ", val);
+}
 
 /**
  * (3) When to use `unknown`
@@ -32,19 +32,19 @@ import { HasEmail } from "./1-basics";
  * We'll do htis with a type guard.
  */
 
-// myUnknown.split(", "); // 🚨 ERROR
+myUnknown.split(", "); // 🚨 ERROR
 
 /**
  * (4) Built-in type guards
  */
-// if (typeof myUnknown === "string") {
-//   // in here, myUnknown is of type string
-//   myUnknown.split(", "); // ✅ OK
-// }
-// if (myUnknown instanceof Promise) {
-//   // in here, myUnknown is of type Promise<any>
-//   myUnknown.then(x => console.log(x));
-// }
+if (typeof myUnknown === "string") {
+  // in here, myUnknown is of type string
+  myUnknown.split(", "); // ✅ OK
+}
+if (myUnknown instanceof Promise) {
+  // in here, myUnknown is of type Promise<any>
+  myUnknown.then(x => console.log(x));
+}
 
 /**
  * (5) User-defined type guards
@@ -52,29 +52,30 @@ import { HasEmail } from "./1-basics";
  */
 
 // // 💡 Note return type
-// function isHasEmail(x: any): x is HasEmail {
-//   return typeof x.name === "string" && typeof x.email === "string";
-// }
+function isHasEmail(x: any): x is HasEmail {
+  return typeof x.name === "string" && typeof x.email === "string";
+}
 
-// if (isHasEmail(myUnknown)) {
-//   // In here, myUnknown is of type HasEmail
-//   console.log(myUnknown.name, myUnknown.email);
-// }
+if (isHasEmail(myUnknown)) {
+  // In here, myUnknown is of type HasEmail
+  console.log(myUnknown.name, myUnknown.email);
+}
 
 // // my most common guard
-// function isDefined<T>(arg: T | undefined): arg is T {
-//   return typeof arg !== "undefined";
-// }
-
+function isDefined<T>(arg: T | undefined): arg is T {
+  return typeof arg !== "undefined";
+}
+let maybeStrings: (string | undefined)[] = ["a", undefined, "b"];
+maybeStrings.filter(isDefined);
 /**
  * (6) Dealing with multiple unknowns
  * -   We kind of lose some of the benefits of structural typing when using `unknown`.
  * -   Look how we can get mixed up below
  */
 
-// let aa: unknown = 41;
-// let bb: unknown = ["a", "string", "array"];
-// bb = aa; // 🚨 yikes
+let aa: unknown = 41;
+let bb: unknown = ["a", "string", "array"];
+bb = aa; // 🚨 yikes
 
 /**
  * (7) Alternative to unknowns - branded types
@@ -84,32 +85,32 @@ import { HasEmail } from "./1-basics";
  */
 
 /* two branded types, each with "brand" and "unbrand" functions */
-// interface BrandedA {
-//   __this_is_branded_with_a: "a";
-// }
-// function brandA(value: string): BrandedA {
-//   return (value as unknown) as BrandedA;
-// }
-// function unbrandA(value: BrandedA): string {
-//   return (value as unknown) as string;
-// }
+interface BrandedA {
+  __this_is_branded_with_a: "a";
+}
+function brandA(value: string): BrandedA {
+  return (value as unknown) as BrandedA;
+}
+function unbrandA(value: BrandedA): string {
+  return (value as unknown) as string;
+}
 
-// interface BrandedB {
-//   __this_is_branded_with_b: "b";
-// }
-// function brandB(value: { abc: string }): BrandedB {
-//   return (value as unknown) as BrandedB;
-// }
-// function unbrandB(value: BrandedB): { abc: string } {
-//   return (value as unknown) as { abc: string };
-// }
+interface BrandedB {
+  __this_is_branded_with_b: "b";
+}
+function brandB(value: { abc: string }): BrandedB {
+  return (value as unknown) as BrandedB;
+}
+function unbrandB(value: BrandedB): { abc: string } {
+  return (value as unknown) as { abc: string };
+}
 
-// let secretA = brandA("This is a secret value");
-// let secretB = brandB({ abc: "This is a different secret value" });
+let secretA = brandA("This is a secret value");
+let secretB = brandB({ abc: "This is a different secret value" });
 
-// secretA = secretB; // ✅ No chance of getting these mixed up
-// unbrandB(secretA);
-// unbrandA(secretB);
+secretA = secretB; // ✅ No chance of getting these mixed up
+unbrandB(secretA);
+unbrandA(secretB);
 
 // // back to our original values
 // let revealedA = unbrandA(secretA);
@@ -122,43 +123,44 @@ import { HasEmail } from "./1-basics";
 /**
  * (8) Bottom types can hold no values. TypeScript has one of these: `never`
  */
-// let n: never = 4;
+let n: never = 4;
 
 /**
  * A common place where you'll end up with a never
  * is through narrowing exhaustively
  */
 
-// let x = "abc" as string | number;
+let x = "abc" as string | number;
 
-// if (typeof x === "string") {
-//   // x is a string here
-//   x.split(", ");
-// } else if (typeof x === "number") {
-//   // x is a number here
-//   x.toFixed(2);
-// } else {
-//   // x is a never here
-// }
+if (typeof x === "string") {
+  // x is a string here
+  x.split(", ");
+} else if (typeof x === "number") {
+  // x is a number here
+  x.toFixed(2);
+} else {
+  x;
+  // x is a never here
+}
 
 /**
  * (9) We can use this to our advantage to create exhaustive conditionals and switches
  */
 
-// class UnreachableError extends Error {
-//   constructor(val: never, message: string) {
-//     super(`TypeScript thought we could never end up here\n${message}`);
-//   }
-// }
+class UnreachableError extends Error {
+  constructor(val: never, message: string) {
+    super(`TypeScript thought we could never end up here\n${message}`);
+  }
+}
 
-// let y = 4 as string | number;
+let y = 4 as string | number | boolean;
 
-// if (typeof y === "string") {
-//   // y is a string here
-//   y.split(", ");
-// } else if (typeof y === "number") {
-//   // y is a number here
-//   y.toFixed(2);
-// } else {
-//   throw new UnreachableError(y, "y should be a string or number");
-// }
+if (typeof y === "string") {
+  // y is a string here
+  y.split(", ");
+} else if (typeof y === "number") {
+  // y is a number here
+  y.toFixed(2);
+} else {
+  throw new UnreachableError(y, "y should be a string or number");
+}

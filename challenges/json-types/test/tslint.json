@@ -2,6 +2,6 @@
   "extends": "dtslint/dtslint.json", // Or "dtslint/dt.json" if on DefinitelyTyped
   "rules": {
     "semicolon": false,
-    "indent": [true, "tabs"]
+    "indent": false
   }
 }

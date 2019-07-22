@@ -5,20 +5,20 @@ import { HasEmail } from "./1-basics";
  * -   functions parameterize values
  */
 
-// // param determines the value of x
-// function wrappedValue(x: any) {
-//   return {
-//     value: x
-//   };
-// }
+// param determines the value of x
+function wrappedValue(x: any) {
+  return {
+    value: x
+  };
+}
 
-// // type param determines the type of x
-// interface WrappedValue<X> {
-//   value: X;
-// }
+// type param determines the type of x
+interface WrappedValue<X> {
+  value: X;
+}
 
-// let val: WrappedValue<string[]> = { value: [] };
-// val.value;
+let val: WrappedValue<string[]> = { value: [] };
+val.value;
 
 /**
  * we can name these params whatever we want, but a common convention
@@ -30,54 +30,57 @@ import { HasEmail } from "./1-basics";
  * -   just like function parameters can have default values
  */
 
-// // for Array.prototype.filter
-// interface FilterFunction<T = any> {
-//   (val: T): boolean;
-// }
+// for Array.prototype.filter
+interface FilterFunction<T = any> {
+  (val: T): boolean;
+}
 
-// const stringFilter: FilterFunction<string> = val => typeof val === "string";
-// stringFilter(0); // 🚨 ERROR
-// stringFilter("abc"); // ✅ OK
+const stringFilter: FilterFunction<string> = val => typeof val === "string";
+stringFilter(0); // 🚨 ERROR
+stringFilter("abc"); // ✅ OK
 
-// // can be used with any value
-// const truthyFilter: FilterFunction = val => val;
-// truthyFilter(0); // false
-// truthyFilter(1); // true
-// truthyFilter(""); // false
-// truthyFilter(["abc"]); // true
+// can be used with any value
+const truthyFilter: FilterFunction = val => !!val;
+truthyFilter(0); // false
+truthyFilter(1); // true
+truthyFilter(""); // false
+truthyFilter(["abc"]); // true
 
 /**
  * (3) You don't have to use exactly your type parameter as an arg
  * -   things that are based on your type parameter are fine too
  */
 
-// function resolveOrTimeout<T>(promise: Promise<T>, timeout: number): Promise<T> {
-//   return new Promise<T>((resolve, reject) => {
-//     // start the timeout, reject when it triggers
-//     const task = setTimeout(() => reject("time up!"), timeout);
+function resolveOrTimeout<T>(promise: Promise<T>, timeout: number): Promise<T> {
+  return new Promise<T>((resolve, reject) => {
+    // start the timeout, reject when it triggers
+    const task = setTimeout(() => reject("time up!"), timeout);
 
-//     promise.then(val => {
-//       // cancel the timeout
-//       clearTimeout(task);
+    promise.then(val => {
+      // cancel the timeout
+      clearTimeout(task);
 
-//       // resolve with the value
-//       resolve(val);
-//     });
-//   });
-// }
-// resolveOrTimeout(fetch(""), 3000);
+      // resolve with the value
+      resolve(val);
+    });
+  });
+}
+resolveOrTimeout(fetch(""), 3000);
 
 /**
  * (4) Type parameters can have constraints
  */
 
-// function arrayToDict<T extends { id: string }>(array: T[]): { [k: string]: T } {
-//   const out: { [k: string]: T } = {};
-//   array.forEach(val => {
-//     out[val.id] = val;
-//   });
-//   return out;
-// }
+function arrayToDict<T extends { id: string }>(array: T[]): { [k: string]: T } {
+  const out: { [k: string]: T } = {};
+  array.forEach(val => {
+    out[val.id] = val;
+  });
+  return out;
+}
+let values: {id: string, name: string}[] = [];
+
+let out = arrayToDict(values).foo.;
 
 // const myDict = arrayToDict([
 //   { id: "a", value: "first", lisa: "Huang" },
@@ -88,12 +91,12 @@ import { HasEmail } from "./1-basics";
  * (5) Type parameters are associated with scopes, just like function arguments
  */
 
-// function startTuple<T>(a: T) {
-//   return function finishTuple<U>(b: U) {
-//     return [a, b] as [T, U];
-//   };
-// }
-// const myTuple = startTuple(["first"])(42);
+function startTuple<T>(a: T) {
+  return function finishTuple<U>(b: U) {
+    return [a, b] as [T, U];
+  };
+}
+const myTuple = startTuple(["first"])(42);
 
 /**
  * (6) When to use generics
@@ -105,18 +108,30 @@ import { HasEmail } from "./1-basics";
  * - it can probably be eliminated
  */
 
-// interface Shape {
-//   draw();
-// }
-// interface Circle extends Shape {
-//   radius: number;
-// }
+interface Shape {
+  draw();
+}
+interface Circle extends Shape {
+  radius: number;
+}
 
-// function drawShapes1<S extends Shape>(shapes: S[]) {
-//   shapes.forEach(s => s.draw());
-// }
+function drawShapes1<S extends Shape>(shapes: S[]): S[] {
+  return shapes.map(s => {
+      s.draw();
+      return s;
+  });
+}
 
-// function drawShapes2(shapes: Shape[]) {
-//   // this is simpler. Above type param is not necessary
-//   shapes.forEach(s => s.draw());
-// }
+let circles: Circle[] = [];
+// drawShapes1(circles).map(c => c.
+
+function drawShapes2(shapes: Shape[]) {
+  // this is simpler. Above type param is not necessary
+  shapes.forEach(s => s.draw());
+}
+
+async function getRecord<T>(url): Promise<T> {
+    const returnVal = await (await fetch(url)).json();
+    return returnVal;
+}
+getRecord<Circle>('http://shape.me/circle').then(c => c.radius);

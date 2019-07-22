@@ -1,5 +1,31 @@
 import { JSONValue, JSONObject, JSONArray } from "json-types";
 
+interface Contact2 {
+  firstName: string;
+  lastName: string;
+  middleName?: string;
+  salutation?: string;
+  email?: string;
+  phones: {
+    [k: string]: string | undefined;
+  };
+  addresses: {
+    [k: string]:
+      | {
+          street: string;
+          city: string;
+          state: string;
+          postalCode: string | number;
+          country: string;
+          houseNumber: number;
+        }
+      | undefined;
+  };
+}
+
+const c: Contact2 = {} as any;
+c.phones.foo; // $ExpectType string | undefined
+
 function isJSONValue(val: JSONValue) {}
 function isJSONArray(val: JSONArray) {}
 function isJSONObject(val: JSONObject) {}

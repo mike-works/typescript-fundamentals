@@ -78,7 +78,9 @@ describe("AddressBook", () => {
       firstName: "Mike",
       lastName: "North",
       addresses: {},
-      phones: {}
+      phones: {
+        mobile: "123756"
+      }
     });
     expect(ab.contacts.length).to.eq(1);
   });
