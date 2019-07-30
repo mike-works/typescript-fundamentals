@@ -23,7 +23,7 @@
     "lerna": "3.16.4",
     "mocha": "6.2.0",
     "rimraf": "2.6.3",
-    "semantic-release": "15.13.18",
+    "semantic-release": "15.13.19",
     "source-map-support": "0.5.12",
     "ts-node": "8.3.0",
     "typescript": "3.5.3"
