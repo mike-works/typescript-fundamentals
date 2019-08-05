@@ -10218,10 +10218,10 @@ tslint@5.13.1:
     tslib "^1.8.0"
     tsutils "^2.27.2"
 
-tsutils@3.16.0:
-  version "3.16.0"
-  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-3.16.0.tgz#79d2f0ca49034f212db16880844795603de00db5"
-  integrity sha512-O3nMy2LmCL+y8w6NynaWxxmKBHzT2pUJPIMnlfXf8lbsjL2ajCizlZXBnnYavjQ/SN2w/9thM+dg3OD+zEXm/g==
+tsutils@3.17.0:
+  version "3.17.0"
+  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-3.17.0.tgz#c3ccab927a475aa2beef6a3695c2ff76da13cdf8"
+  integrity sha512-fyveWOtAXfumAxIqkcMHuPaaVyLBKjB8Y00ANZkqh+HITBAQscCbQIHwwBTJdvQq7RykLEbOPcUUnJ16X4NA0g==
   dependencies:
     tslib "^1.8.1"
 
