@@ -36,7 +36,7 @@ import { HasPhoneNumber, HasEmail } from "./1-basics";
 // ) => void;
 
 // // NOTE: we don't need type annotations for contact or message
-// const emailer: ContactMessenger1 = (_ contact, _message) => {
+// const emailer: ContactMessenger1 = (_contact, _message) => {
 //   /** ... */
 // };
 
