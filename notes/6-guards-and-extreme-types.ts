@@ -66,6 +66,17 @@ import { HasEmail } from "./1-basics";
 //   return typeof arg !== "undefined";
 // }
 
+// // NEW TS 3.7: assertion-based type guards!
+// function assertIsStringArray(arr: any[]): asserts arr is string[] {
+//   if (!arr) throw new Error('not an array!');
+//   const strings = arr.filter(i => typeof i === 'string');
+//   if (strings.length !== arr.length) throw new Error('not an array of strings');
+// }
+
+// const arr: (string|number)[] = ['3', 12, '21'];
+// assertIsStringArray(arr);
+// arr;
+
 /**
  * (6) Dealing with multiple unknowns
  * -   We kind of lose some of the benefits of structural typing when using `unknown`.

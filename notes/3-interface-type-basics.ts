@@ -9,9 +9,8 @@ import { HasPhoneNumber, HasEmail } from "./1-basics";
 // // this is the ONLY time you'll see a type on the RHS of assignment
 // type HasName = { name: string };
 
-// // 🚨 self-referencing types don't work! (we'll get there!)
-// type NumVal = 1 | 2 | 3 | NumArr;
-// type NumArr = NumVal[];
+// NEW in TS 3.7: Self-referencing types!
+type NumVal = 1 | 2 | 3 | NumVal[];
 
 // == INTERFACE == //
 /**
@@ -105,11 +104,11 @@ import { HasPhoneNumber, HasEmail } from "./1-basics";
 // == TYPE ALIASES vs INTERFACES == //
 
 /**
- * (7) Type aliases are initialized synchronously, so self-referential stuff is 👎
+ * (7) Type aliases are initialized synchronously, but
+ * -   can reference themselves
  */
 
-// type NumberVal = 1 | 2 | 3 | NumberArr;
-// type NumberArr = NumberVal[];
+// type NumberVal = 1 | 2 | 3 | NumberVal[];
 
 /**
  * (8) Interfaces are initialized lazily, so combining it
