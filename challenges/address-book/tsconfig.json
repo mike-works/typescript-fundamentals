@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "checkJs": true
+    "checkJs": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "strictNullChecks": true
   },
   "include": ["src"]
 }

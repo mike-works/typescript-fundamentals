@@ -87,16 +87,14 @@ describe("reduceDict", () => {
   });
   it("should not invoke the reducer function for undefined values", () => {
     let invokeCount = 0;
-    expect(
-      indexExports.reduceDict(
-        { abc: 4, def: undefined },
-        (x, acc) => {
-          invokeCount++;
-          return `${acc}, ${x}`;
-        },
-        ""
-      )
-    ).to.eq(", 4");
+    indexExports.reduceDict(
+      { abc: 4, def: undefined },
+      (x, acc) => {
+        invokeCount++;
+        return `${acc}, ${x}`;
+      },
+      ""
+    );
     expect(invokeCount).to.eq(1);
   });
 });
