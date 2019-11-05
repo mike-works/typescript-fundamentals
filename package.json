@@ -26,7 +26,7 @@
     "semantic-release": "15.13.30",
     "source-map-support": "0.5.16",
     "ts-node": "8.4.1",
-    "typescript": "3.7.0-dev.20191021"
+    "typescript": "3.7.2"
   },
   "workspaces": [
     "examples/*",
