@@ -22,7 +22,7 @@
     "husky": "3.1.0",
     "lerna": "3.20.2",
     "mocha": "6.2.2",
-    "rimraf": "3.0.1",
+    "rimraf": "3.0.2",
     "semantic-release": "15.14.0",
     "source-map-support": "0.5.16",
     "ts-node": "8.6.2",
