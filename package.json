@@ -11,7 +11,7 @@
     "@commitlint/travis-cli": "8.3.5",
     "@mike-works/js-lib-renovate-config": "2.0.0",
     "@mike-works/workshop-semantic-release-config": "1.0.0",
-    "@types/chai": "4.2.8",
+    "@types/chai": "4.2.9",
     "@types/mocha": "5.2.7",
     "@types/node": "11.15.5",
     "@typescript-eslint/eslint-plugin": "2.19.2",
