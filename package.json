@@ -17,7 +17,7 @@
     "@typescript-eslint/eslint-plugin": "2.19.2",
     "@typescript-eslint/parser": "2.19.2",
     "chai": "4.2.0",
-    "dtslint": "0.9.9",
+    "dtslint": "2.0.6",
     "eslint": "6.8.0",
     "husky": "3.1.0",
     "lerna": "3.20.2",
