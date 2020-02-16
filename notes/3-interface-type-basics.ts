@@ -4,49 +4,50 @@ import { HasPhoneNumber, HasEmail } from "./1-basics";
 /**
  * (1) Type aliases allow us to give a type a name
  */
-// type StringOrNumber = string | number;
+
+type StringOrNumber = string | number;
 
 // // this is the ONLY time you'll see a type on the RHS of assignment
-// type HasName = { name: string };
+type HasName = { name: string };
 
 // // 🚨 self-referencing types don't work! (we'll get there!)
-// type NumVal = 1 | 2 | 3 | NumArr;
-// type NumArr = NumVal[];
+type NumVal = 1 | 2 | 3 | NumArr;
+type NumArr = NumVal[];
 
 // == INTERFACE == //
 /**
  * (2) Interfaces can extend from other interfaces
  */
 
-// export interface HasInternationalPhoneNumber extends HasPhoneNumber {
-//   countryCode: string;
-// }
+export interface HasInternationalPhoneNumber extends HasPhoneNumber {
+  countryCode: string;
+}
 
 /**
  * (3) they can also be used to describe call signatures
  */
 
-// interface ContactMessenger1 {
-//   (contact: HasEmail | HasPhoneNumber, message: string): void;
-// }
+interface ContactMessenger1 {
+  (contact: HasEmail | HasPhoneNumber, message: string): void;
+}
 
-// type ContactMessenger2 = (
-//   contact: HasEmail | HasPhoneNumber,
-//   message: string
-// ) => void;
+type ContactMessenger2 = (
+  contact: HasEmail | HasPhoneNumber,
+  message: string
+) => void;
 
 // // NOTE: we don't need type annotations for contact or message
-// const emailer: ContactMessenger1 = (_ contact, _message) => {
-//   /** ... */
-// };
+const emailer: ContactMessenger1 = (_contact, _message) => {
+  /** ... */
+};
 
 /**
  * (4) construct signatures can be described as well
  */
 
-// interface ContactConstructor {
-//   new (...args: any[]): HasEmail | HasPhoneNumber;
-// }
+interface ContactConstructor {
+  new (...args: any[]): HasEmail | HasPhoneNumber;
+}
 
 /**
  * (5) index signatures describe how a type will respond to property access
