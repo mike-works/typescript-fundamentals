@@ -39,7 +39,7 @@
     "css-loader": "3.4.2",
     "express": "4.17.1",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
-    "http-proxy-middleware": "0.20.0",
+    "http-proxy-middleware": "0.21.0",
     "husky": "3.0.9",
     "jest": "24.9.0",
     "node-sass": "4.13.1",
