@@ -13,7 +13,7 @@
     "@mike-works/workshop-semantic-release-config": "1.0.0",
     "@types/chai": "4.2.10",
     "@types/mocha": "5.2.7",
-    "@types/node": "12.12.29",
+    "@types/node": "12.12.30",
     "@typescript-eslint/eslint-plugin": "2.23.0",
     "@typescript-eslint/parser": "2.23.0",
     "chai": "4.2.0",
