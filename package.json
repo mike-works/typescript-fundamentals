@@ -16,7 +16,7 @@
     "travis-deploy-once": "travis-deploy-once"
   },
   "devDependencies": {
-    "@babel/core": "7.8.7",
+    "@babel/core": "7.9.0",
     "@commitlint/cli": "8.3.5",
     "@commitlint/config-conventional": "8.3.4",
     "@commitlint/travis-cli": "8.3.5",
@@ -33,7 +33,7 @@
     "awesome-typescript-loader": "5.2.1",
     "babel-core": "6.26.3",
     "babel-jest": "24.9.0",
-    "babel-loader": "8.0.6",
+    "babel-loader": "8.1.0",
     "babel-plugin-react-transform": "3.0.0",
     "babel-preset-env": "1.7.0",
     "css-loader": "3.4.2",
