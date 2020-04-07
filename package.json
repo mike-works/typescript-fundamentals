@@ -36,7 +36,7 @@
     "babel-loader": "8.1.0",
     "babel-plugin-react-transform": "3.0.0",
     "babel-preset-env": "1.7.0",
-    "css-loader": "3.5.0",
+    "css-loader": "3.5.1",
     "express": "4.17.1",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "http-proxy-middleware": "0.21.0",
