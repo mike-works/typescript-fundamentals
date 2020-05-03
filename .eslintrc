@@ -4,8 +4,8 @@
   "extends": ["eslint:recommended"],
   "parserOptions": {
     "ecmaVersion": 9,
-    "sourceType": "module",
-    "project": "tsconfig.json"
+    "sourceType": "module"
+    // "project": "tsconfig.json"
   },
   "env": {
     "shared-node-browser": true,

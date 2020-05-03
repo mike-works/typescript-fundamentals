@@ -1,0 +1,15 @@
+{
+  // we can configure the ts compiler to compile certain files using:
+  // files: [list, of, files, here]
+  // or you can use includes with accets a glob to match files too:
+  "include": ["src"], // everything in the src folder
+  // how are we comiling it
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2017",
+    "outDir": "lib",
+    "jsx": "react",
+    // don't allow the type 'any' -- these are wild cards
+    "noImplicitAny": true
+  }
+}
