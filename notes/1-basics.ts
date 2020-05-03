@@ -30,21 +30,21 @@ const y = "hello world"; // y is literally typed to "hello world"
 /**
  * (5) sometimes we need to declare a variable w/o initializing it
  */
-// let z;
-// z = 41;
-// z = "abc"; // (6) oh no! This isn't good
+let z;
+z = 41;
+z = "abc"; // (6) oh no! This isn't good
 
 /**
  * If we look at the type of z, it's `any`. This is the most flexible type
- * in TypeScript (think of it like a JavaScript `let`)
+ * in TypeScript (think of it like a JavaScript `let`) -- its a wild card.
  */
 
 /**
  * (7) we could improve this situation by providing a type annotation
  * when we declare our variable
  */
-// let zz: number;
-// zz = 41;
+let zz: number; // we should set the type, even if we haven't yet initalised it with a value
+zz = 41;
 // zz = "abc"; // 🚨 ERROR Type '"abc"' is not assignable to type 'number'.
 
 //== SIMPLE ARRAYS ==//
