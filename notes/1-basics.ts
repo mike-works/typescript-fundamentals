@@ -20,7 +20,12 @@ x = "hello mars";
  * (4) let's look at const. The type is literally 'hello world'
  */
 const y = "hello world"; // y is literally typed to "hello world"
-
+const obj = {
+  name: "murphy",
+  age: 2.5,
+};
+// obj is immutable as it's a const so i can't add properties but it looks like i can delete them?
+// can I delete properties?
 /**
  * This is called a 'string literal type'. y can never be reassigned since it's a const,
  * so we can regard it as only ever holding a value that's literally the string 'hello world'
