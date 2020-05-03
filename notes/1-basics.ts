@@ -7,7 +7,7 @@
 let x = "hello world";
 
 /**
- * (2) x is let variable so usual, reassignment is fine
+ * (2) x is let variable so as usual, reassignment is fine
  */
 x = "hello mars";
 
