@@ -2,13 +2,14 @@
 
 /**
  * (1) x is a string, b/c we’ve initialized it
+ * -- x implicitly inherits the type of it's value
  */
-// let x = "hello world";
+let x = "hello world";
 
 /**
- * (2) reassignment is fine
+ * (2) x is let variable so usual, reassignment is fine
  */
-// x = "hello mars";
+x = "hello mars";
 
 /**
  * (3) but if we try to change type
@@ -18,7 +19,7 @@
 /**
  * (4) let's look at const. The type is literally 'hello world'
  */
-// const y = "hello world";
+const y = "hello world"; // y is literally typed to "hello world"
 
 /**
  * This is called a 'string literal type'. y can never be reassigned since it's a const,
