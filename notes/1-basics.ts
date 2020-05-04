@@ -24,6 +24,7 @@ const obj = {
   name: "murphy",
   age: 2.5,
 };
+
 // obj is immutable as it's a const so i can't add properties but it looks like i can delete them?
 // can I delete properties?
 /**
@@ -48,6 +49,7 @@ z = "abc"; // (6) oh no! This isn't good
  * (7) we could improve this situation by providing a type annotation
  * when we declare our variable
  */
+
 let zz: number; // we should set the type, even if we haven't yet initalised it with a value
 zz = 41;
 // zz = "abc"; // 🚨 ERROR Type '"abc"' is not assignable to type 'number'.
@@ -57,22 +59,30 @@ zz = 41;
 /**
  * (8) simple array types can be expressed using []
  */
-// let aa: number[] = [];
-// aa.push(33);
+let aa: number[] = [];
+aa.push(33);
+
+let a = [5]; // here the type declaration is unnecessary as it in inferred/implicitly inherited
+// a.push("hello") // ERROR: Argument of type '"hello"' is not assignable to parameter of type 'number'.
 // aa.push("abc"); // 🚨 ERROR: Argument of type '"abc"' is not assignable to parameter of type 'number'.
 
 /**
  * (9) we can even define a tuple, which has a fixed length
  */
-// let bb: [number, string, string, number] = [
-//   123,
-//   "Fake Street",
-//   "Nowhere, USA",
-//   10110
-// ];
+let bb: [number, string, string, number] = [
+  123,
+  "Fake Street",
+  "Nowhere, USA",
+  10110,
+];
 
 // bb = [1, 2, 3]; // 🚨 ERROR: Type 'number' is not assignable to type 'string'.
 
+let mike = "mike";
+mike = "rachel"; // mike can be assigned as it inherited type string
+
+let rachel: "Rachel"; // you can use string literal types on let vars
+// rachel = "mikey" // ERROR: Type '"mikey"' is not assignable to type '"Rachel"'
 /**
  * (10) Tuple values often require type annotations (  : [number, number] )
  */
@@ -123,40 +133,45 @@ zz = 41;
  * Sometimes we have a type that can be one of several things
  */
 
-// export interface HasPhoneNumber {
-//   name: string;
-//   phone: number;
-// }
+export interface HasPhoneNumber {
+  name: string;
+  phone: number;
+}
 
-// export interface HasEmail {
-//   name: string;
-//   email: string;
-// }
+export interface HasEmail {
+  name: string;
+  email: string;
+}
 
-// let contactInfo: HasEmail | HasPhoneNumber =
-//   Math.random() > 0.5
-//     ? {
-//         // we can assign it to a HasPhoneNumber
-//         name: "Mike",
-//         phone: 3215551212
-//       }
-//     : {
-//         // or a HasEmail
-//         name: "Mike",
-//         email: "mike@example.com"
-//       };
+let hasEmail: HasEmail = {
+  name: "Rachel",
+  email: "rachel@gmail.com",
+};
 
-// contactInfo.name; // NOTE: we can only access the .name property  (the stuff HasPhoneNumber and HasEmail have in common)
+let contactInfo: HasEmail | HasPhoneNumber =
+  Math.random() > 0.5
+    ? {
+        // we can assign it to a HasPhoneNumber
+        name: "Mike",
+        phone: 3215551212,
+      }
+    : {
+        // or a HasEmail
+        name: "Mike",
+        email: "mike@example.com",
+      };
+
+console.log(contactInfo.name); // NOTE: we can only access the .name property  (the stuff HasPhoneNumber and HasEmail have in common)
 
 /**
  * (15) Intersection types
  */
-// let otherContactInfo: HasEmail & HasPhoneNumber = {
-//   // we _must_ initialize it to a shape that's asssignable to HasEmail _and_ HasPhoneNumber
-//   name: "Mike",
-//   email: "mike@example.com",
-//   phone: 3215551212
-// };
+let otherContactInfo: HasEmail & HasPhoneNumber = {
+  // we _must_ initialize it to a shape that's asssignable to HasEmail _and_ HasPhoneNumber
+  name: "Mike",
+  email: "mike@example.com",
+  phone: 3215551212,
+};
 
 // otherContactInfo.name; // NOTE: we can access anything on _either_ type
 // otherContactInfo.email;
