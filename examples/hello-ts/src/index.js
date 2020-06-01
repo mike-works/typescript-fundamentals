@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.addNumbers = void 0;
 /**
  * Create a promise that resolves after some time
  * @param n number of milliseconds before promise resolves
@@ -10,10 +13,11 @@ function timeout(n) {
  * @param a first number
  * @param b second
  */
-export async function addNumbers(a, b) {
+async function addNumbers(a, b) {
     await timeout(500);
     return a + b;
 }
+exports.addNumbers = addNumbers;
 //== Run the program ==//
 (async () => {
     console.log(await addNumbers(3, 4));
