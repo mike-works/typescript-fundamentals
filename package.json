@@ -21,7 +21,7 @@
     "eslint": "6.8.0",
     "husky": "3.1.0",
     "lerna": "3.22.1",
-    "mocha": "6.2.2",
+    "mocha": "6.2.3",
     "rimraf": "3.0.2",
     "semantic-release": "15.14.0",
     "source-map-support": "0.5.19",
