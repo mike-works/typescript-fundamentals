@@ -16,7 +16,7 @@
     "@types/node": "12.19.16",
     "@typescript-eslint/eslint-plugin": "2.34.0",
     "@typescript-eslint/parser": "2.34.0",
-    "chai": "4.2.0",
+    "chai": "4.3.0",
     "dtslint": "0.9.9",
     "eslint": "6.8.0",
     "husky": "3.1.0",
