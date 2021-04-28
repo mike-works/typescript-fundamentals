@@ -1510,10 +1510,10 @@
     "@types/tapable" "*"
     "@types/webpack" "*"
 
-"@types/http-proxy@^1.17.3":
-  version "1.17.3"
-  resolved "https://registry.yarnpkg.com/@types/http-proxy/-/http-proxy-1.17.3.tgz#348e1b808ff9585423cb909e9992d89ccdbf4c14"
-  integrity sha512-wIPqXANye5BbORbuh74exbwNzj+UWCwWyeEFJzUQ7Fq3W2NSAy+7x7nX1fgbEypr2/TdKqpeuxLnXWgzN533/Q==
+"@types/http-proxy@^1.17.5":
+  version "1.17.5"
+  resolved "https://registry.yarnpkg.com/@types/http-proxy/-/http-proxy-1.17.5.tgz#c203c5e6e9dc6820d27a40eb1e511c70a220423d"
+  integrity sha512-GNkDE7bTv6Sf8JbV2GksknKOsk7OznNYHSdrtvPJXO0qJ9odZig6IZKUi5RFGi6d1bf6dgIAe4uXi3DBc7069Q==
   dependencies:
     "@types/node" "*"
 
@@ -5464,21 +5464,21 @@ http-proxy-agent@^2.1.0:
     agent-base "4"
     debug "3.1.0"
 
-http-proxy-middleware@0.21.0:
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-0.21.0.tgz#c6b1ca05174b5fbc57bee9485ffa0fa2f0dabeb0"
-  integrity sha512-4Arcl5QQ6pRMRJmtM1WVHKHkFAQn5uvw83XuNeqnMTOikDiCoTxv5/vdudhKQsF+1mtaAawrK2SEB1v2tYecdQ==
+http-proxy-middleware@1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-1.3.1.tgz#43700d6d9eecb7419bf086a128d0f7205d9eb665"
+  integrity sha512-13eVVDYS4z79w7f1+NPllJtOQFx/FdUW4btIvVRMaRlUY9VGstAbo5MOhLEuUgZFRHn3x50ufn25zkj/boZnEg==
   dependencies:
-    "@types/http-proxy" "^1.17.3"
-    http-proxy "^1.18.0"
+    "@types/http-proxy" "^1.17.5"
+    http-proxy "^1.18.1"
     is-glob "^4.0.1"
-    lodash "^4.17.15"
+    is-plain-obj "^3.0.0"
     micromatch "^4.0.2"
 
-http-proxy@^1.18.0:
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/http-proxy/-/http-proxy-1.18.0.tgz#dbe55f63e75a347db7f3d99974f2692a314a6a3a"
-  integrity sha512-84I2iJM/n1d4Hdgc6y2+qY5mDaz2PUVjlg9znE9byl+q0uC3DeByqBGReQu5tpLK0TAqTIXScRUV+dg7+bUPpQ==
+http-proxy@^1.18.1:
+  version "1.18.1"
+  resolved "https://registry.yarnpkg.com/http-proxy/-/http-proxy-1.18.1.tgz#401541f0534884bbf95260334e72f88ee3976549"
+  integrity sha512-7mz/721AbnJwIVbnaSv1Cz3Am0ZLT/UBwkC92VlxhXv/k/BBQfM2fXElQNC27BVGr0uwUpplYPQM9LnaBMR5NQ==
   dependencies:
     eventemitter3 "^4.0.0"
     follow-redirects "^1.0.0"
@@ -5943,6 +5943,11 @@ is-plain-obj@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-1.1.0.tgz#71a50c8429dfca773c92a390a4a03b39fcd51d3e"
   integrity sha1-caUMhCnfync8kqOQpKA7OfzVHT4=
+
+is-plain-obj@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-3.0.0.tgz#af6f2ea14ac5a646183a5bbdb5baabbc156ad9d7"
+  integrity sha512-gwsOE28k+23GP1B6vFl1oVh/WOzmawBrKwo5Ev6wMKzPkaXaCDIQKzLnvsA42DRlbVTWorkgTKIviAKCWkfUwA==
 
 is-plain-object@^2.0.1, is-plain-object@^2.0.3, is-plain-object@^2.0.4:
   version "2.0.4"
