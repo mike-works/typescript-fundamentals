@@ -55,11 +55,11 @@
     "style-loader": "1.1.4",
     "travis-deploy-once": "5.0.11",
     "ts-node": "8.9.0",
-    "tslint": "5.19.0",
+    "tslint": "5.20.1",
     "tslint-loader": "3.5.4",
     "tslint-microsoft-contrib": "6.2.0",
     "tsutils": "3.17.1",
-    "typescript": "3.5.3",
+    "typescript": "3.9.10",
     "webpack": "4.42.1",
     "webpack-dev-middleware": "3.7.2",
     "webpack-hot-middleware": "2.25.0"
